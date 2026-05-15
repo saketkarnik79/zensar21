@@ -1,0 +1,75 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\ZensarDemos\\Zensar21\\Copilot\\DemoApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{EFFDEB0D-5090-4A7C-84E8-357E125061B4}|DemoApp\\DemoApp.csproj|c:\\zensardemos\\zensar21\\copilot\\demoapp\\demoapp\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFFDEB0D-5090-4A7C-84E8-357E125061B4}|DemoApp\\DemoApp.csproj|solutionrelative:demoapp\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFFDEB0D-5090-4A7C-84E8-357E125061B4}|DemoApp\\DemoApp.csproj|c:\\zensardemos\\zensar21\\copilot\\demoapp\\demoapp\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFFDEB0D-5090-4A7C-84E8-357E125061B4}|DemoApp\\DemoApp.csproj|solutionrelative:demoapp\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFFDEB0D-5090-4A7C-84E8-357E125061B4}|DemoApp\\DemoApp.csproj|c:\\zensardemos\\zensar21\\copilot\\demoapp\\demoapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFFDEB0D-5090-4A7C-84E8-357E125061B4}|DemoApp\\DemoApp.csproj|solutionrelative:demoapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\ZensarDemos\\Zensar21\\Copilot\\DemoApp\\DemoApp\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "DemoApp\\Services\\UserService.cs",
+              "ToolTip": "C:\\ZensarDemos\\Zensar21\\Copilot\\DemoApp\\DemoApp\\Services\\UserService.cs",
+              "RelativeToolTip": "DemoApp\\Services\\UserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-15T07:30:32.284Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\ZensarDemos\\Zensar21\\Copilot\\DemoApp\\DemoApp\\Models\\User.cs",
+              "RelativeDocumentMoniker": "DemoApp\\Models\\User.cs",
+              "ToolTip": "C:\\ZensarDemos\\Zensar21\\Copilot\\DemoApp\\DemoApp\\Models\\User.cs",
+              "RelativeToolTip": "DemoApp\\Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-15T07:21:31.189Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\ZensarDemos\\Zensar21\\Copilot\\DemoApp\\DemoApp\\Program.cs",
+              "RelativeDocumentMoniker": "DemoApp\\Program.cs",
+              "ToolTip": "C:\\ZensarDemos\\Zensar21\\Copilot\\DemoApp\\DemoApp\\Program.cs",
+              "RelativeToolTip": "DemoApp\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-15T07:21:01.104Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

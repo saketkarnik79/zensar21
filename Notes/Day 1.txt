@@ -1,0 +1,227 @@
+What is Gen AI?
+	AI systems designed to generate novel content rather than just analyze or classify data.
+Core mechanism used by Gen AI:
+	It uses advanced models like transformers, GANs(Generative Advarsarial Networks), diffusion models, variational auto encoders to learn from the training data & produce new outputs.
+Examples Gen AI
+	Text: Genereate new text using LLMs. This text could be essays, emails, poetry, story, etc.
+	Images: Artistic images, realistic images based on text prompts.
+	Code: Generating code snippets from text prompts.
+	Music & Video:
+How it works?
+	Training: Models are trained on massive datasets (text, images, audio, video, etc.)
+	Pattern recognition: The AI learns statistical patterns & relationships.
+	Generation: When propted, it produces new outputs that mimic the style, structure, or logic of the training data.
+Risks & Challenges
+	Misinformation
+	Bias
+	Ethics
+	Dependence
+What is Copilot?
+	It is an AI-powered assistant integrated into various software & tools.
+Whithin Microsoft Ecosystem, types of Copilot:
+	Microsoft 365 Copilot
+	GitHub Copilot
+		What it is?
+			It is an AI-powered developer assistant integrated into various tools like Visual Studio, VS Code, etc. An intelligent autocomplete system that is trained on large amount of code.
+		What it is not?
+			Not a replacement for developers or design/architectural thinking.
+			Not guaranteed to produce correct, secure, or optimal code.
+			Not aware of your full system design or the business context.
+			Not a compliance or security validation tool.
+		How it Works?
+			LLMs
+			Context Window
+			Tokens
+		Licensing, Enterprise Policies, Telemetry Basics
+			Copilot is available as:
+				Individual Subscription
+				GitHub Copilot Business/Enterprise
+					Policy Enforcement
+					Audit Controls
+					Integration with GiHub Enterprise / Azure DevOps workflows
+		Responsible AI usage in enterprise environments
+			Key principles
+				Human in the loop
+					Developers must review & validate all generated code.
+				Accountability
+					The developer is responsible for:
+						Security
+						Performance
+						Compliance
+				Fairness & bias awareness
+					Generated logic should not embed any unintended bias.
+			Must Dos 
+				Always run:
+					Unit tests
+					Static code analysis
+					Security scans
+				Treat Copilot suggestions as:
+					Drafts and not the final implementations.
+		IP, confidentiality, and secure coding considerations
+			Intellectual Property (IP)
+				Risks:
+					Generated code may resemble publicly available code
+					Potential license conflicts
+				Mitigations:
+					Use enterprise settings to filter public code matches
+					Perform license checks in CI/CD pipelines.
+			Confidentiality
+				Risks:
+					Sensitive code or secrets accidentally included in prompts/comments.
+				Mitigations:
+					Never include:
+						API Keys
+						Secrets
+						Proprietery algorithms in prompts
+					Use:
+						Secure Vaults
+						Environment Variables
+				Secure Coding Risks with Copilot
+					Copilot might generate:
+						Insecure SQL queries
+						Weak authentication flows
+						Improper exception handler
+							Risk:
+								var user = db.Users.First(u => u.Id == id); // may throw exception
+							Mitigation:
+								var user = await db.Users.FirstOrDefaultAsync(u => u.Id == id);
+								if(user == null) return NotFound();
+					Security best practices:
+						Use: 
+							Paramaeterized queries / EF Core
+							Input Validation
+							Proper logging 
+						Follow frameworks:
+							OWASP
+							Microsoft Secure Development Lifecycle
+Copilot Setup & Productivity Configuration
+	• Installing Copilot in Visual Studio 2022+ and VS Code
+	• Enabling Copilot Chat
+	• Copilot inline vs chat usage patterns
+		Tips:
+			Use Intent Driven Comments
+			Write partial code first
+			Use naming Strategically
+			Accept suggestions incrementally
+			Use Inline chat for Micro-Edits
+			Combine with Tests
+	
+	• Keyboard shortcuts & productivity tips
+		Accept Suggestion -> Tab
+		Dismiss Suggestion -> Esc
+		Cycle Suggestion -> Alt + ]/Alt + [
+		Trigger Manually -> Ctrl + Enter
+		Open Chat -> Ctrl + Shift + I
+		
+	• When to disable Copilot (sensitive code zones)
+		Sensitive Code Zone
+		Compliance sensitive work
+		Legacy/Crictical Systems
+		Low-Trust Contexts
+		
+Prompt Engineering for Developers
+	• Prompt fundamentals — what to include (intent, constraints, patterns) and what to avoid
+		What to include in a Good Prompt?
+			A high-quality prompt must contain:
+				Intent
+					e.g. Create an ASP.NET Core Api endpoint to retrieve customer orders
+				Constraints
+					Specify requirements:
+						Frameworks
+						Coding Standards
+						Performance/security needs
+					e.g. Use async/await , Entity Framework Core and return IActionResult with proper status codes
+				Patterns
+					e.g. Follow repository pattern and use dependency injection
+		What to avoid?
+			Vague prompts
+			Overloaded prompts
+			Missing constraints
+			Sensitive data			
+	• Inline prompts vs chat-based prompts
+		Inline prompts (comments in code)
+			Best for:
+				Code generation
+				Small scoped tasks
+					e.g. // Create a service method to calculate invoice total with tax & discounts
+				Fast & contextual
+				Uses existing file structure
+				Limited reasoning depth
+		Chat Based Prompts
+			Best for:
+				Design dicussions
+				Debugging
+				Refactoring
+					e.g. Refactor this service to follow SOLID principles & improve testability
+				Support iteration
+				Handles complex instructions
+				Requires explicit context
+		When to use What?
+		
+		Scenario				Use
+		Generate API method		Inline
+		Fix performance issue	Chat
+		Explain legacy code		Chat
+		Add DTO mapping			Inline
+		
+	• Refinement techniques — iterative prompting & correction prompts
+		Iterative prompting
+			Start simple -> refine progressively
+			e.g. 
+				Generate a repository method to fetch orders
+				Add pagination & filtering by status
+				Optimize query using EF Core best practices
+		Correction prompts
+			Fix null handling and add proper exception management
+			Rewrite this using async/await instead of synchronous calls
+		Style enforcement prompts
+			Follow clean architecture principles and use dependency injection
+		
+	• Using comments as design intent
+		Comments act as high-signal prompts for Copilot.
+		e.g.
+			// Domain service to process order checkout
+			// Steps:
+			// 1. Validate Order
+			// 2. Calculate Total
+			// 3. Apply Discounts
+			// 4. Save Order
+			// Reject order if total is zero or negative
+	• Role-based prompts (e.g., Act as a senior .NET architect...)
+		It improves output quality by guiding tone & expertise:
+			Architect level
+				e.g. Act as a senior .NET architect. Design a scalable order processing service using clean architecture.
+			Security-focused
+				e.g. Act as a security expert. Review this code for OWASP vulnerabilities.
+			Performance-focused
+				e.g. Act as a performance engineer. Optimize this EF Core query.
+				
+	• .NET-specific prompt patterns — API controllers, domain services, repositories, DTO mappings, validation logic
+		
+	e.g.
+		Act as a senior .NET developer.
+
+		Create an ASP.NET Core API endpoint to create an order.
+		Constraints:
+		- Use async/await
+		- Validate input using FluentValidation
+		- Use EF Core repository pattern
+		- Return appropriate HTTP status codes
+		- Handle exceptions properly
+
+		Include DTO mapping and dependency injection.
+
+Technical Design & Architecture Support with Copilot
+	Copilot is not just for writing code - it can significantly assis in translating requirements into architecture, generate design drafts and accelerating implementation scaffolding.
+	
+	• Translating requirements into technical design drafts
+		Using copilot chat, you can convert business requirements to technical design artifacts
+		e.g. Build an order management system with inventory validation & payment processing.
+	
+	• Using Copilot Chat to propose architecture options and evaluate trade-offs (CQRS, Clean Architecture, DDD)
+	
+		Compare clean architecture vs CQRS for a high-traffic e-commerce system in .NET, Include trade-offs is scalability, complexity, and maintenanace.
+		
+	• Creating sequence flows and component responsibilities
+	• Generating skeletons from design intent
+	• .NET focus — Web API structure, layered architecture, Clean Architecture patterns, Microservices vs Monolith
