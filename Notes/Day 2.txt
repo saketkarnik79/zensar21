@@ -1,0 +1,73 @@
+Quality guardrails
+	Avoid "Magic Code"
+		Bad Code Example: 
+			if(amount > 1000)
+		Good Code Example:
+			private const decimal MaxOrderAmount = 1000;
+			if(amount > MaxOrderAmount)
+	Validate Inputs Explicitly
+		if(string.IsNullOrWhitespace(dto.CustomerName))
+			throw new ArgumentException("Customer name required.");
+	Review EF Queries
+		Watch for:
+			Missing AsNoTracking()
+			N + 1 queries
+			Unfiltered queries
+	Ensure proper error handling always
+	Avoid blind Copilot acceptance
+	
+Unit Testing, Integration Testing & Test Coverage
+	• Anti-patterns to avoid
+		Blind Test Generation
+			Generate 100 Tests (Bad)
+		Testing implementation Instead of Behavior
+			Assert.Equal(1, repo.CallCount);(Bad)
+			Assert.Equal("Test", result.CustomerName);
+		Always passing tests (False positives)
+			Assert.True(true);
+		Over mocking
+			Leads to fake systems
+			Breaks real-world behavior
+		Ignoring failure paths
+			Always test:
+				Exceptions
+				Invalid inputs
+				External failures
+			
+Debugging, Code Review & Refactoring with Copilot
+	• Explaining legacy code
+		Legacy code is often hard to understand:
+			Lack of documentation
+			Poor naming conventions
+			Complex logic & coupling
+			
+	• Root-cause analysis using Copilot Chat
+		When debugging:
+			Share error message + code snippet
+			Ask structure questions
+		Copilot-Assisted debugging workflow
+			Interpret stack trace
+			Identify the failing line
+			Suggest possible reasons
+				Null values
+				Incorrect assumptions
+				Race conditions
+	• Refactoring suggestions
+		Refactoring improves structure without changing behavior.
+		Advanced Refactoring Tips:
+			Replace nested contionals with guard clauses
+			Extract methods
+			Remove duplications
+			Introduce design patterns where appropriate
+	• Improving readability & maintainability
+		What "Good Code" looks like?
+			Readable (self-documenting)
+			Modular
+			Consistent naming
+			Minimal complexity
+	• Applying SOLID principles retroactively
+		S - SRP - Single Responsibility Principle
+		O - OCP - Open/Closed Principle
+		L - LSP - Liskov Substitution Principle
+		I - ISP - Interface Segragation Principle
+		D - DIP - Dependency Inversion Principle
