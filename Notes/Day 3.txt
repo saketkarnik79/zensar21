@@ -1,0 +1,293 @@
+Secure Coding & Compliance with Copilot
+	• Secure coding principles in .NET
+		Secure coding ensuresyour application resists attacks & protects data.
+		Core principles of secure coding:
+			Least privilege
+			Defense in Depth
+				Apply multiple layers:
+					Input Validation
+					Authentication & Authorization
+					Logging & Monitoring
+			Fail securely
+				Do not leak implementation details
+					try
+					{
+						// logic
+					}
+					catch (Exception ex)
+					{
+						// BAD: exposes internals
+						return ex.ToString();
+
+						// GOOD:
+						return "An error occurred.";
+					}
+			Avoid hardcoding secrets
+				// BAD
+				string apiKey = "12345";
+
+				// GOOD
+				var apiKey = Configuration["ApiKey"];
+			Use built-in security features
+	• OWASP(Open Worldwide Application Security Project) Top 10 awareness
+		OWASP is a global non-profit foundation dedicated to improving software security through open-source projects, education, and community collaboration. The most standards published by OWASP are known as "OWASP Top 10".
+		Key risks & .NET Context
+			Injection
+				// BAD
+				var query = "SELECT * FROM Users WHERE Name = '" + name + "'"; // name="xyz';DROP DATABASE AppDB;--
+
+				// GOOD
+				var cmd = new SqlCommand("SELECT * FROM Users WHERE Name = @name", conn);
+				cmd.Parameters.AddWithValue("@name", name);
+			Broken Authentication
+			Sesitive Data Exposure
+				Avoid:
+					Unencypted data
+					Improper storage
+				Use:
+					TLS
+					Encryption APIs
+					Secure cookies
+			Security Misconfiguration
+				Avoid:
+					Debug mode enabled
+					Open ports
+				Fix:
+					Harden production configs
+					Disable detailed errors
+			Cross-Site Scripting(XSS)
+				<!-- BAD -->
+				<div>@userInput</div>
+
+				<!-- GOOD -->
+				<div>@Html.Encode(userInput)</div>
+			Broken Access Control			
+	• Identifying insecure AI-generated code
+		AI -generated code can introduce substantial vulnerabilities.
+			public IActionResult Get(string id)
+			{
+				return Ok(repo.Get(id)); // no validation
+			}
+			Common risks:
+				Missing input validation.
+				SQL Injection.
+				Insecure Defaults
+				Improper error handling
+				Weak cryptography
+	• Authentication & authorization patterns
+		Authentication options:
+			Identity
+			JWT
+			OAuth
+			OpenId
+			Active Directory
+			Azure AD(Azure Entra ID)
+		Authorization options:
+			RBAC
+				[Authorize(Roles = "Admin")]
+				public IActionResult AdminOnly()
+				``
+			Policy-based Authorization
+				services.AddAuthorization(options =>
+				{
+					options.AddPolicy("RequireManager",
+						policy => policy.RequireRole("Manager"));
+				});
+			Claims-based Authorization
+				if (User.HasClaim("Department", "Finance"))
+				{
+					// allow access
+				}
+
+	• Input validation and sanitization
+		Why is it important?
+			Because it prevents:
+				Injection attacks
+				XSS
+				Data corruption
+		Options:
+			Validation
+			Sanitization
+			Model Binding Protection
+			Fluent Validations
+	• Dependency audit awareness
+		Modern apps rely heavily on external libraries -> major risk.
+		Risks:
+			Vulnerable packages
+			Malicious dependencies
+			Outdated libraries
+		Tools in .NET Ecosystems to mitigate these risks:
+			dotnet list package --vulnerable
+			GitHub Dependabot
+			NuGet Security Advisory
+			SCA Tools
+				Synk
+				WhiteSource
+				OWASP Dependency Check
+				
+Performance, Scalability & Optimization
+	• Identifying performance bottlenecks
+		Why this is important?
+			Find where the system is getting slow before we optimize the code.
+			Common bottlenecks in .NET apps
+				Slow database queries
+				Excessive memory allocations
+				Blocking operations(sync over async)
+				Inefficient loops/LINQ
+				Network latency(APIs, DB calls)
+			Tools in .NET Ecosystem:
+				dotnet-trace / dotnet-counters
+				Application insights (App insights)
+				PerfView
+				Mini Profiler
+				Visual Studio Diagnostic Tools
+			
+			foreach (var user in users)
+			{
+				var orders = db.Orders.Where(o => o.UserId == user.Id).ToList();
+			}
+	• Optimizing LINQ & EF Core queries
+		Target:
+			Make database queries efficient, reduce database round trips & avoid unnecessary data loading.
+				Common LINQ Issues:
+					Premature Matrialization
+						var users = db.Users.ToList().Where(u => u.IsActive); // Bad
+						var users = db.Users.Where(u => u.IsActive).ToList(); // Good
+					Selecting entire entities
+						var users = db.Users.ToList(); // Bad
+						var users = db.Users
+										.Select(u => new { u.Id, u.Name })
+										.ToList();
+					N + 1 Query Issue
+					Inefficient Filters
+						.Where(u => u.Name.ToLower() == name.ToLower()) // Bad
+						.Where(u => u.Name == name) // Good
+		EF Core Optimization Techniques
+			Use AsNoTracking() for read-only queries
+				var users = db.Users.AsNoTracking().ToList();
+			Use Compiled Queries
+			Index frequently queried columns
+			Paginate results
+				.Skip(page * size).Take(size)
+	• Async scalability improvements
+		Target:
+			Improve overall throughput & scalability under load.
+			Common problems:
+				Blocking Calls
+				Sync over Async
+				
+	• Caching strategy suggestions
+	• Load-related design considerations
+		Target:
+			Design systems that scale under heavy traffic.
+			Key Concepts:
+				Horizontal vs Vertical scaling
+					Vertical Scaling = Larger Machine
+					Horizontal Scaling = More Instances/Servers (preferred)
+				Stateless APIs
+				Load Balancing
+				Database Scaling
+				Rate Limiting
+					app.UseRateLimiter();
+				Circuit Braker Pattern
+				Queue-Based Load Leveling
+				CDN Usage
+				
+Engineering Best Practices & Team Guidelines
+	• When to trust vs challenge Copilot
+		Copilot is a productivity enhancer/accelerator- not a source of truth.
+		When you can trust Copilot?
+			Ideally, you can confidently use copilot for:
+				Boilerplate code
+					Controllers, DTOs, Entities, CRUD, EF Core code
+				Standard patterns
+					DI
+					Repository Pattern
+					UoW Patterns
+					GoF Patterns
+					SOLID Principles
+				Well-known APIs
+					LINQ operations
+					ASP.NET Core Middleware
+		When to challenge Copilot?
+			Security-sensitive code
+				Auth
+				Encryption
+				Token Validation
+			Complex Logic
+				Business rules
+				Domain Logic
+				Financial Calculations
+			Performance-critical paths
+				EF Core Queries
+				High-Throughput APIs
+			New or evolving frameworks
+				Copilot may suggest outdated patterns
+	In place of accepting Any suggestions blindly:
+		Ask:
+			Is this the best approach?
+			What are the edge cases here?
+			Does this follow .NET best practices?
+			
+	• Mandatory human review practices
+		Copilot generated code must never bypass code review.
+		Required Review Checklist:
+			Correctness
+			Security
+			Performance
+			Architecture Alignment
+			Code Quality
+		Pull Request Guidelines:
+			Every PR should:
+				Clearly indicate Copilot usage
+				Include purpose & testing done.
+				Pass:
+					Unit tests
+					Static analysis
+					Security scans
+	• Coding standards enforcement
+		Consistency is critical for scaling teams.
+		Enforcing Standards  in .NET
+			Use EditorConfig
+				dotnet_style_qualification_for_field = true:suggestion
+				csharp_new_line_before_open_brace = all
+			Roslyn Analyzers
+				With the help of these you can enforce:
+					Naming Conventions
+					Code Smells
+					Performance Rules
+			Stylecop / SonarQube
+				Static Code Analysis
+				Security + Maintainability Checks
+			CI/CD Integration
+				Fail builds on violations
+		
+	• Documentation generation
+		Copilot significantly accelerates documentation-but needs guidance.
+		Types of Documentation:
+			Inline Code Comments
+				/// <summary>/// users from database
+				/// </summary>
+			API Documentation (Swagger)
+				[ProducesResponseType(StatusCodes.Status200OK)]
+				``
+			Architecture Documentation
+			
+	• Copilot dos and donts
+		Use Copilot for:
+			Boilerplate Generation
+			Refactoring suggestions
+			Writing Unit Tests/ Integration Tests
+			Explaining Legacy Code
+			Improving Readability
+		Validate Everything
+			Run Tests
+			Perform Security Checks
+			Cross-Verify Logic
+		Don'ts
+			Blindly Accept Code
+			Don't skip Testing
+			Don't Assume Best Practices
+			Don't Expose Secrets
+			Don't Depend Fully on AI
+			
