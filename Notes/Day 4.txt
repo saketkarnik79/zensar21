@@ -1,0 +1,192 @@
+Introduction to Azure DevOps
+	• What is Azure DevOps and why it matters for development teams
+		What is Azure DevOps?
+			It is a suite of cloud-based tools from Microsoft that helps development teams plan, build, test, & deliver software efficiently. It supports the entire SDLC & enables the teams to collaborate seamlessly across different stages of development. At its core, Azure DevOps integrates development, operations & quality assurance into a unified environment called DevOps practices.
+		Why it matters for development teams?
+			Modern softwtware development requires speed, collaboration, automation & quality assurance.
+			End to end Development Lifecycle Management
+				Azure DevOps provides tools for:
+					Planning work
+					Writing & managing code
+					Building applications
+					Testing software
+					Deploying to production
+				Enhanced Collaboration
+					Developers, testers & Project managers work on the same platform.
+					Real-time updates & tracking improve transparency.
+					Integration with tools like Git, Visual Studio, & GitHub.
+				Automation & CI/CD
+					Supports CI & CD
+					Automates building, testing & deployment pipelines.
+					Reduces manual errors & speeds up releases.
+				Scalability & Flexibility
+					Works for small startups to large enterprises.
+					Supports multiple languages.
+					Cloud-hosted or on-premises setup.
+				Improved software quality
+					Built-in testing tools
+					Automated testing pipelines
+					Traceability from requirements -> code -> deployment					
+	• Services overview — Boards, Repos, Pipelines, Artifacts, Test Plans
+		Azure DevOps is composed of several integrated services where each service focuses on a specific part of the development cycle.
+		Services:
+			Azure Boards (Work Tracking)
+				Purpose: Agile project management & tracking
+				Key Features of Azure Board:
+					Work Items: User Stories, Tasks, Bugs, Epics
+					Agile boards: Kanban boards, Scrum boards
+					Backlogs & sprint planning
+					Dashboards & reporting
+				Why it matters?
+					Helps teams organize & prioritize work
+					Provides visibility into project progress
+					Support Agile frameworks like Scrum & Kanban
+			Azure Repos (Source Code Management)
+				Purpose: Version control for source code
+				Key features of Azure Repos:
+					Git Repos
+					Branching & Merging
+					Pull requests & code reviews
+					Access control & permissions
+				Why it matters?
+					Maintains code history
+					Enables safe collaboration through branching strategies
+					Ensures code quality via revies & approvals.
+			Azure Pipelines(CI/CD)
+				Purpose: Build, test & deploy application automatically.
+				Key Features of Azure Pipelines:
+					CI
+					CD
+					Supports multiple platforms
+					YAML based pipeline definitions
+					Integration with Azure, AWS, GCP, ...
+				Why it matters?
+					Automates repititive tasks
+					Reduces errors during deployment
+					Enables fatser releases & feedback cycles
+			Azure Artifacts (Package management)
+				Purpose: Manage & share packages(dependencies)
+				Key features of Azure artifacts:
+					Supports multiple package types:
+						NuGet (.NET)
+						npm, yarn (JS)
+						Maven (Java)
+						Python packages (Python)
+					Versioning & dependency management
+					Private package feeds
+				Why it matters?
+					Ensures consistent dependencies across projects
+					Improves build reliability
+					Secures internal packages
+			Azure Test Plans (Tesing & QA)
+				Purpose: Manual & exploratory testing
+				Key Features of Azure Test Plans:
+					Test case management
+					Test plans & suites
+					Manual test execution
+					Exploratory testing tools
+					Integration with pipelines
+				Why it matters?
+					Helps ensure software quality & reliability
+					Tracks defects & bugs systematically
+					Supports collaboration between testers & developers
+Azure Repos & Git Fundamentals
+	Azure repos is Microsoft's source code management service withing Azure DevOps platform. It primarily uses Git, a distributed version control system, to help the teams collaborate on code safely & efficiently.
+	It provides:
+		Git repositories for version control
+		Support for branching, merging, & pull requests
+		Access control & security
+		Integration with pipelines & boards
+	What is Git?
+		Git is a distributed version control system.
+		Core features
+			Repository
+			Commit
+			Branch
+			Merge
+			Remote
+	Basic Git Workflow
+		Clone -> Edit -> Commit -> Push -> Pull
+		e.g.
+			git clone https://dev.azure.com/org/project/_git/repo
+			
+			git add .
+			git commit -m "Added login page"
+			
+			git push origin main
+			
+			git pull origin main
+			
+	Branching in Git
+		What is a branch?
+			A branch is separate version of your code where you can:
+				Add features
+				Fix bugs
+				Experiment safely
+		Why branching is important?
+			Avoid breaking main code
+			Enable parallel development
+			Support team collaboration
+	Branching Strategies
+		Branching strategy defines how teams organize branches & workflows.
+			Feature Branch Strategy
+				main
+				  |-- Feature-Login
+				  |-- Feature-Dashboard
+				
+				git checkout -b feature-login
+				
+				git add .
+				
+				git commit -m "Added login logic"
+				
+				git push origin feature-login
+				
+				git checkout -b feature-dashboard
+				
+			Main/Dev Branch Strategy
+				main -> prod ready code
+				dev -> integration branch
+				feature branches -> new features
+				
+				main
+				  |dev
+					|-- Feature-Login
+					|-- Feature-Dashboard
+		Best Practices in Azure Repos
+			Pull requests
+			Protect main branches
+			Commit frequently
+			Use meaningful descriptive commit messages
+			Sync regularly
+	Azure Boards — Work Item Tracking
+	They represent unit of work. Azure DevOps uses a hierarchical structure for these:
+		Epic -> Feature -> User Story -> Task/Bug
+	• Work item types — Epics, Features, User Stories, Tasks, Bugs
+		Epic: Large business objective or initiatives spanning multiple teams or sprints.
+			e.g. Build e-commerce platform
+				 Build an ERP system
+				 Develop a mobile banking system
+		Feature: A functional component of an Epic that delivers value.
+			e.g. User authentication module
+				 Payment gateway integration
+		User Story: A small, user-focused requirement.
+			e.g. As a user,
+					I want to login
+					  So that I can access my account.
+		Task: Technical work required to be complete an user story.
+			e.g. Create login ui.
+				 Implement API call.
+				 Write unit tests.
+		Bug: Represents defects in the system.
+			e.g. Login fails on invalid input.
+				 Page creashes on load.
+			
+	• Creating and managing a sprint backlog
+	• Kanban boards — columns, WIP limits, swimlanes
+	• Linking commits and PRs to work items
+		Method 1: Link via the Commit message
+			git commit -m "Added login feature #123"
+		Method 2: Link in Pull Request
+		Method 3: Manual Linking
+	• Basic reporting — burndown charts and velocity	
