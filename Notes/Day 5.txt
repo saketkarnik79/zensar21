@@ -1,0 +1,139 @@
+Introduction to Azure Pipelines
+	Azure pipelines is a CI/CD service in Azure DevOps that allow you to automate building, testing & deploying applications.
+	• What is a pipeline and why CI matters?
+		What is a pipeline?
+			A pipeline is an automated workflow that defines the steps required to:
+				Build Application
+				Run Tests
+				Package artifacts
+				Deploy to environments(Dev, QA, Staging, Prod)
+			Pipeline = Code -> Build -> Test -> Deploy
+		What is CI?
+			CI is a development practice where developers:
+				Frequently commit code to a shared repo
+				Each commit triggers an automated build & test
+		Why CI matters?	
+			Early bug detection
+			Faster Development
+			Improved Code Quality
+			Reduced Manual Effort
+			Better Collaboration
+		Types of Pipelines
+			Classic Pipelines
+			YAML Pipelines
+	• YAML pipelines vs Classic pipelines — which to use?
+		YAML pipelines (Recommended)
+			Defined using *.yml file stored in your repo.
+			Advantages:
+				Version-Controlled (stored with code)
+				Easy to review (PR-based changes)
+				Reusable & modular
+				Supports IaaC practices
+				Industry standard
+			e.g.
+				trigger:
+				  - main
+
+				pool:
+				  vmImage: 'ubuntu-latest'
+
+				steps:
+				  - script: echo Hello World
+				``
+			When to use?
+				Modern DevOps workflows
+				Large Teams
+				Automation-heavy environments
+		Classic Pipelines (UI-Based)
+			Created using the Azure DevOps web interface.
+				Advantages:
+					Easier for Beginners
+					No YAML knowledge required
+					Drag-and-Drop style configuration
+				Limitations:
+					Not version-controlled
+					Harder to maintain at scale
+					Less flexible
+		Which pipeline should be use?
+			Use YAML pipelines unless:
+				You are just learning
+				Your team prefers UI-driven workflows
+			
+	• Pipeline anatomy — trigger, pool, stages, jobs, steps
+		Trigger - Defines when the pipeline runs.
+			e.g.
+				trigger:
+				  - main
+			Other triggers:
+				Pull request
+				Scheduled runs
+				Manual triggers
+		Pool - Specifies where the pipeline runs (which machine/agent)
+			e.g. 
+				pool:
+				  vmImage: 'ubuntu-latest'
+		Stages - Logical grouping of jobs
+			e.g.
+				stages:
+				- stage: Build
+				- stage: Test
+				- stage: Deploy
+		Jobs - A job is a group of steps executed on the same agent.
+			e.g.
+				jobs:
+				- job: BuildJob
+				  steps:
+					- script: echo Building...
+		Steps - The smallest unit of work (actual tasks)
+			e.g.
+				steps:
+				  - script: echo Hello
+				  - task: UsePythonVersion@0
+
+		Pipeline
+			|-- Trigger
+			|-- Stage(s)
+					|-- Job(s)
+							|-- Step(s)
+	• Variables — built-in, custom and secret variables
+		Variables help you make pipelines dynamic & reusable.
+		Types of Variables:
+			Built-in Variables - Provide by Azure DevOps automatically.
+			e.g.
+				Build.SourceBranch
+				Build.BuildId
+				Agent.OS
+				
+				steps:
+				  - script: echo $(Build.BuildId)
+				``
+			Custom Variables - User Defined Variables
+				e.g.
+					variables:
+					  appName: "MyApp"
+					``
+				
+				- script: echo $(appName)
+			Secret Variables - Used for sensitive data like Password, API Keys, Tokens
+				These are encryted & hidden in logs.
+			
+				variables:
+				  dbPassword: $(DB_PASSWORD)
+	• Pipeline agents — Microsoft-hosted vs self-hosted (overview)
+		Agents are machines that executes your pipeline jobs.
+		Types of Agents:
+			Microsoft-Hosted Agents
+				Managed by Azure.
+				Features:
+					No setup required
+					Pre-installed tools (NodeJS, Python, .NET, Docker, Java, etc.)
+					Automatically maintained
+				e.g.
+					pool:
+					  vmImage: 'ubuntu-latest'
+			Self-Hosted Agents
+				Machines you configure and manage.
+					Features:
+						Full control over environment.
+						Custom software & configurations.
+						Can run inside private networks.
