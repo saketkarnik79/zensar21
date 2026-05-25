@@ -1,0 +1,107 @@
+Azure Artifacts
+	It is a service in Azure DevOps that helps teams manage, store, & share packages(dependencies) used in software development.
+	• What are Artifacts and when to use them?
+		What are Artifacts?
+			Artifacts are versioned packages or files produced during softeaware development that can be reused across projects or teams.
+			Types of Azure Artifacts:
+				NuGet (for .NET)
+				npm or yarn (for Node.js)
+				Maven (for Java)
+				Python packages (for Python)
+				Universal packages (any files)
+			Artifacts = Shared, reusable build outputs or dependencies
+		When to use them?
+			Private package mangement
+			Dependency sharing acress teams
+			Version control for packages
+			Secure & controlled distribution
+			Caching Public packages
+	• Creating a feed and publishing NuGet packages
+		What is feed?
+			A feed in Azure Artifacts is a pacakage repository where the packages are stored & managed.
+			How to Create a feed?
+				
+				dotnet nuget add source {path of the feed}
+	• Consuming packages from a private feed in a pipeline
+	• Versioning packages — semantic versioning basics
+	
+Release Pipelines & Continuous Delivery
+	• Difference between CI (build) and CD (release) pipelines
+		CI: Focuses on building & validating code automatically.
+			Key Objectives of CI:
+				Compile Code
+				Run Unit Test
+				Generate Artifacts
+			Trigger used:
+				Code commit/PR
+				Manual Trigger (optional, for testing the pipeline)
+			Output Expected:
+				Build artifacts (ready-to-deploy packages)
+		CD: CD focuses on deploying the artifacts to environments.
+			Key Objectives of CD:
+				Deploy application to environments(Dec -> QA -> Staging -> Prod)
+				Run integration tests
+				Apply approvals & gates
+			Trigger used:
+				Successful CI pipeline
+				Manual Trigger (optional, for testing the pipeline)
+			Output Expected:
+				Running application in environments
+	• Creating a multi-stage YAML pipeline — Build, Test, Deploy
+	• Deployment environments — Dev, Staging, Production
+	• Approval gates — manual approvals before production
+		What are approval gates?
+			Approval gates are manual or automated checks that must pass before deployment continues.
+		Why use Approval gates?
+			Prevent accidental production release
+			Add human validation
+			Ensure compliance
+		Types of Approvals
+			Manual Approval
+				A person must approve deployment
+			Automated Checks
+				REST API Checks
+				Azure Monitor alerts
+				Business Rules
+	• Deploying a .NET Web App to Azure App Service
+	• Rollback strategies — basics
+		Why Rollback?
+			If deployment fails or introducing bugs-you must be able to quickly revert to a stable version
+		Common rollback strategies
+			Redeploy Previous Version
+			Deployment Slots (Azure App Service)
+			Blue-Green Deployment
+			Canary Releases
+Monitoring & Wrap-Up
+	• Pipeline run history and audit logs
+		Pipeline run history
+			Azure DevOps keeps a detailed history of every pipeline execution.
+			Where to find?
+				Go to Pipelines -> Runs Tab
+			What you can see?
+				Status
+				Trigger source
+				Duration
+				Who triggered the run?
+				Logs for each step
+	• Dashboards — creating a team visibility board
+		
+	• Common pipeline failures and how to fix them
+		Package Restore Failure
+		Build Failure
+		Permission Issues
+		Deployment Failure
+		Approval Blocked
+		Artifact not found
+		
+	• DevOps mindset — culture, feedback loops, improving over time
+		What is DevOps?
+			DevOps is not just tools - it's culture + practices.
+		Key principals
+			Collaboration
+			Automation
+			Continuous Feedback Loops
+			Continuous Improvement
+			Shift Left Testing
+			Monitoring & Observability
+			

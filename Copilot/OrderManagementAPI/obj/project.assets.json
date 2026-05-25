@@ -102,6 +102,15 @@
           }
         }
       },
+      "MathsLib/1.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0/MathsLib.dll": {}
+        },
+        "runtime": {
+          "lib/net10.0/MathsLib.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.OpenApi/10.0.8": {
         "type": "package",
         "dependencies": {
@@ -954,6 +963,17 @@
         "lib/netstandard2.0/Humanizer.dll",
         "lib/netstandard2.0/Humanizer.xml",
         "logo.png"
+      ]
+    },
+    "MathsLib/1.0.1": {
+      "sha512": "fy+uTUSwCgpqfC7gRE1IEV5MF6UscBm8306HED02W7jXrU0A5mY8Cz/M9v8DUPyfb3Hyu7JF//NDOGINNwuu5g==",
+      "type": "package",
+      "path": "mathslib/1.0.1",
+      "files": [
+        ".nupkg.metadata",
+        "lib/net10.0/MathsLib.dll",
+        "mathslib.1.0.1.nupkg.sha512",
+        "mathslib.nuspec"
       ]
     },
     "Microsoft.AspNetCore.OpenApi/10.0.8": {
@@ -2254,6 +2274,7 @@
     "net10.0": [
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 12.0.1",
       "FluentValidation.AspNetCore >= 11.3.1",
+      "MathsLib >= 1.0.1",
       "Microsoft.AspNetCore.OpenApi >= 10.0.8",
       "Microsoft.EntityFrameworkCore >= 10.0.8",
       "Microsoft.EntityFrameworkCore.InMemory >= 10.0.8",
@@ -2290,7 +2311,8 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {},
+        "https://pkgs.dev.azure.com/skoizendemoorg/_packaging/MathsLibFeed/nuget/v3/index.json": {}
       },
       "frameworks": {
         "net10.0": {
@@ -2323,6 +2345,10 @@
           "FluentValidation.AspNetCore": {
             "target": "Package",
             "version": "[11.3.1, )"
+          },
+          "MathsLib": {
+            "target": "Package",
+            "version": "[1.0.1, )"
           },
           "Microsoft.AspNetCore.OpenApi": {
             "target": "Package",

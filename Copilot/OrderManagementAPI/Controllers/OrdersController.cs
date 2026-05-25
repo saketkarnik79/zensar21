@@ -5,6 +5,7 @@ using OrderManagementAPI.Models;
 using OrderManagementAPI.Services;
 using OrderManagementAPI.Services.Interfaces;
 using OrderManagementAPI.DTOs;
+using MathsLib;
 
 namespace OrderManagementAPI.Controllers
 {
@@ -22,6 +23,10 @@ namespace OrderManagementAPI.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Order>>> Get()
         {
+            Calc calc = new Calc();
+
+            var result = calc.Add(5, 10);
+
             var orders = await _orderService.GetOrdersAsync();
             return Ok(orders);
         }

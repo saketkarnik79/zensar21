@@ -26,7 +26,8 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/skoizendemoorg/_packaging/MathsLibFeed/nuget/v3/index.json": {}
         },
         "frameworks": {
           "net10.0": {
@@ -389,7 +390,8 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/skoizendemoorg/_packaging/MathsLibFeed/nuget/v3/index.json": {}
         },
         "frameworks": {
           "net10.0": {
@@ -422,6 +424,10 @@
             "FluentValidation.AspNetCore": {
               "target": "Package",
               "version": "[11.3.1, )"
+            },
+            "MathsLib": {
+              "target": "Package",
+              "version": "[1.0.1, )"
             },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
