@@ -104,4 +104,3 @@ Monitoring & Wrap-Up
 			Continuous Improvement
 			Shift Left Testing
 			Monitoring & Observability
-			

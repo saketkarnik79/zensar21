@@ -1,0 +1,181 @@
+Introduction to .NET & Environment
+	What is .NET?
+		.NET is a modern, open-source, cross-platform development framework developed by Microsoft. It supports building applications for:
+			Web(ASP.NET Core)
+			Desktop(Windows Forms, WPF)
+			Cloud & Microservices
+			Mobile(MAUI/Xamarin)
+			Gaming(Unity)
+		.NET provides a runtime + libraries + tools to simplify development.
+	Core components of .NET
+		Core CLR(Core Common Language Runtime)
+			Assist in Code Execution
+			Handle:
+				Memory Management (GC)
+				Security
+				Exception Handling
+		CIL (Common Intermediate Language)
+			.NET Language code is compiled into IL, not the machine code directly.
+			CLR convert IL -> machine code at runtime.
+		CTS(Common Type System)
+			Defines how data types are declared & used.
+		CLS(Common Language Specification
+			Set of rules allowing multiple languages to work together.
+		BCL(Base Class Library)
+			Provides ready-made classes like:
+				System.Console
+				System.Collections.ArrayList
+			
+	• Overview, history & ecosystem — .NET Framework vs .NET Core vs .NET 5/6+
+		.NET Framework (2002)-versions-1.0, 1.1, 2.0, 3.0, 3.5, 4.0, 4.5, 4.5.1, 4.5.2, 4.6, 4.6.1, 4.7, 4.8, 4.8.1, 4.8.2
+			Windows-Only Framework
+			Used For:
+				ASP.NET (Old Web apps)
+				Windows Forms
+				WPF Apps
+			Stable & Mature
+			Not cross-platform
+		.NET Core (2016)-versions- .NET Core 1.0, .NET Core 1.1, .NET Core 1.2, .NET Core 2.0, .NET Core 2.1, .NET Core 2.2, .NET Core 3.0, .NET Core 3.1
+			Open-Source & Cross Platform
+			Runs on:
+				Windows
+				Linux
+				macOS
+			Features
+				High Performance
+				Lightweight
+				Modular Architecture
+		One .NET - versions - .NET 5.0, 6.0, 7.0, 8.0, 9.0, 10.0
+			Unified platform replacing both Framework & Core
+			Single SDK for all the app types
+			Improved performance
+	.NET Ecosystem
+		Includes:
+			Languages: C#, VB.NET, F#, Managed C++
+			Frameworks:
+				ASP.NET Core (Web)
+				Entity Framework Core(Database Integration)
+			Tools:
+				Visual Studio
+				VS Code
+			Package Manager: NuGet
+	
+	• Setting up Visual Studio & VS Code
+		As per demo
+	• NuGet, analyzers & project templates
+		NuGet(Package Manager)
+			Used to install dependencies(libraries)
+			Similar to:
+				npm (JavaScript)
+				maven (Java)
+				pip (Python)
+				
+			e.g.
+				dotnet add package <package name>
+		Analyzers
+			Tools that check your code for:
+				Errors
+				Performance Issues
+				Coding Standards
+		Project Templates
+			Predefined Templates help create apps quickly.
+				e.g.
+					dotnet new <template name>
+						dotnet new console
+						dotnet new web
+						dotnet new mvc
+						dotnet new webapi
+						dotnet new classlib
+						...
+C# Data Types
+	Value Types
+		bit
+		byte
+		short
+		int
+		long
+		float
+		double
+		decimal
+		bool
+		char
+	Reference Types
+		string
+		arrays
+		object
+		
+C# Variables
+	int age = 25;
+	string name = "James";
+C# Contants
+	const double PI = 3.1412d;
+Type Conversion
+	Implicit
+		int x = 10;
+		double y = x;
+	Explicit
+		double a = 10.5d;
+		int b = (int)a;
+		
+Input from Console 
+	Console.ReadLine();
+	
+C# Language Fundamentals
+		• Error handling & logging patterns
+			What is Error handling?
+				Error handling ensures your spplication doesn't crash unexpectedly & can handle failures gracefully.
+				Best practices for Exception Handling:
+					Catch specific exceptions first
+					Don't ever swallo exception silently
+					Use finally or using for cleanup
+					Avoid using exceptions for normal logic
+					Log errors properly.
+			Logging Patterns in .NET
+				Why logging?
+					It helps you to:
+						debug issues.
+						monitor applications.
+						track errors in production.
+				How to implement logging in .NET?
+					Built-in Logging(ILogger)
+				Logging levels
+					Trace
+					Debug
+					Information
+					Warning
+					Error
+					Critical
+				Popular logging libraries
+					Serilog
+					NLog
+					Log4Net
+					Azure App Insights
+			Logging Best Practices
+				Use structured logging
+				Avoid logging sensitive data
+				Use appropriate levels
+				Log exceptions with stack trace
+					
+		• Testing approaches overview
+			Why Testing?
+				It ensures:
+					correctness of the code.
+					Stability
+					maintainability
+			Types:
+				Unit Testing - Tests small units
+				Integration Testing - Tests interaction between components
+				Functional Testing(End-To-End Testing) - Tests full application flow
+			Best Practices for testing
+				Follow AAA pattern
+					Arrange
+					Act
+					Assert
+				Write small, independent tests
+				Use mocking for isolating dependencies.
+		• VS productivity tips, profiling & debugging
+			What is Profiling?
+				It is about analyzing:
+					performance
+					memory usage
+					cpu usage

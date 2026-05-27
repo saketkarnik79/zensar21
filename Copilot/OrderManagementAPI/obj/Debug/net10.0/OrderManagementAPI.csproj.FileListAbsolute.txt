@@ -119,3 +119,4 @@ C:\ZensarDemos\Zensar21\Copilot\OrderManagementAPI\bin\Debug\net10.0\xunit.runne
 C:\ZensarDemos\Zensar21\Copilot\OrderManagementAPI\bin\Debug\net10.0\xunit.assert.dll
 C:\ZensarDemos\Zensar21\Copilot\OrderManagementAPI\bin\Debug\net10.0\xunit.core.dll
 C:\ZensarDemos\Zensar21\Copilot\OrderManagementAPI\bin\Debug\net10.0\xunit.execution.dotnet.dll
+C:\ZensarDemos\Zensar21\Copilot\OrderManagementAPI\bin\Debug\net10.0\MathsLib.dll

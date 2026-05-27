@@ -10,6 +10,7 @@
         "dependencies": {
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
           "FluentValidation.AspNetCore": "11.3.1",
+          "MathsLib": "1.0.1",
           "Microsoft.AspNetCore.OpenApi": "10.0.8",
           "Microsoft.EntityFrameworkCore": "10.0.8",
           "Microsoft.EntityFrameworkCore.InMemory": "10.0.8",
@@ -85,6 +86,14 @@
           "lib/net6.0/Humanizer.dll": {
             "assemblyVersion": "2.14.0.0",
             "fileVersion": "2.14.1.48190"
+          }
+        }
+      },
+      "MathsLib/1.0.1": {
+        "runtime": {
+          "lib/net10.0/MathsLib.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
           }
         }
       },
@@ -628,6 +637,13 @@
       "sha512": "sha512-lQKvtaTDOXnoVJ20ibTuSIOf2i0uO0MPbDhd1jm238I+U/2ZnRENj0cktKZhtchBMtCUSRQ5v4xBCUbKNmyVMw==",
       "path": "humanizer.core/2.14.1",
       "hashPath": "humanizer.core.2.14.1.nupkg.sha512"
+    },
+    "MathsLib/1.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-fy+uTUSwCgpqfC7gRE1IEV5MF6UscBm8306HED02W7jXrU0A5mY8Cz/M9v8DUPyfb3Hyu7JF//NDOGINNwuu5g==",
+      "path": "mathslib/1.0.1",
+      "hashPath": "mathslib.1.0.1.nupkg.sha512"
     },
     "Microsoft.AspNetCore.OpenApi/10.0.8": {
       "type": "package",
