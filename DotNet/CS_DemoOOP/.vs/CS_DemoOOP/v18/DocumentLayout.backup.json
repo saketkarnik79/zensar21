@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\ZensarDemos\\Zensar21\\DotNet\\CS_DemoOOP\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{866BD014-5440-3BDA-F089-E084C979A5D4}|CS_DemoOOP.csproj|c:\\zensardemos\\zensar21\\dotnet\\cs_demooop\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{866BD014-5440-3BDA-F089-E084C979A5D4}|CS_DemoOOP.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{866BD014-5440-3BDA-F089-E084C979A5D4}|CS_DemoOOP.csproj|c:\\zensardemos\\zensar21\\dotnet\\cs_demooop\\referencetypes\\banking\\savingsaccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{866BD014-5440-3BDA-F089-E084C979A5D4}|CS_DemoOOP.csproj|solutionrelative:referencetypes\\banking\\savingsaccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{866BD014-5440-3BDA-F089-E084C979A5D4}|CS_DemoOOP.csproj|c:\\zensardemos\\zensar21\\dotnet\\cs_demooop\\referencetypes\\banking\\accountbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{866BD014-5440-3BDA-F089-E084C979A5D4}|CS_DemoOOP.csproj|solutionrelative:referencetypes\\banking\\accountbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{866BD014-5440-3BDA-F089-E084C979A5D4}|CS_DemoOOP.csproj|c:\\zensardemos\\zensar21\\dotnet\\cs_demooop\\referencetypes\\insurance\\ilifeinsurance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{866BD014-5440-3BDA-F089-E084C979A5D4}|CS_DemoOOP.csproj|solutionrelative:referencetypes\\insurance\\ilifeinsurance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ILifeInsurance.cs",
+              "DocumentMoniker": "C:\\ZensarDemos\\Zensar21\\DotNet\\CS_DemoOOP\\ReferenceTypes\\Insurance\\ILifeInsurance.cs",
+              "RelativeDocumentMoniker": "ReferenceTypes\\Insurance\\ILifeInsurance.cs",
+              "ToolTip": "C:\\ZensarDemos\\Zensar21\\DotNet\\CS_DemoOOP\\ReferenceTypes\\Insurance\\ILifeInsurance.cs",
+              "RelativeToolTip": "ReferenceTypes\\Insurance\\ILifeInsurance.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-29T11:19:11.344Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AccountBase.cs",
+              "DocumentMoniker": "C:\\ZensarDemos\\Zensar21\\DotNet\\CS_DemoOOP\\ReferenceTypes\\Banking\\AccountBase.cs",
+              "RelativeDocumentMoniker": "ReferenceTypes\\Banking\\AccountBase.cs",
+              "ToolTip": "C:\\ZensarDemos\\Zensar21\\DotNet\\CS_DemoOOP\\ReferenceTypes\\Banking\\AccountBase.cs",
+              "RelativeToolTip": "ReferenceTypes\\Banking\\AccountBase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-29T11:14:48.037Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SavingsAccount.cs",
+              "DocumentMoniker": "C:\\ZensarDemos\\Zensar21\\DotNet\\CS_DemoOOP\\ReferenceTypes\\Banking\\SavingsAccount.cs",
+              "RelativeDocumentMoniker": "ReferenceTypes\\Banking\\SavingsAccount.cs",
+              "ToolTip": "C:\\ZensarDemos\\Zensar21\\DotNet\\CS_DemoOOP\\ReferenceTypes\\Banking\\SavingsAccount.cs",
+              "RelativeToolTip": "ReferenceTypes\\Banking\\SavingsAccount.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-29T10:53:05.705Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\ZensarDemos\\Zensar21\\DotNet\\CS_DemoOOP\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\ZensarDemos\\Zensar21\\DotNet\\CS_DemoOOP\\Program.cs*",
+              "RelativeToolTip": "Program.cs*",
+              "ViewState": "AgIAAFIAAAAAAAAAAAAgwF4AAABfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-29T07:09:49.973Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+OOP - Object Oriented Programming
+	What is the purpose of OO Approach?
+		To make the understanding of the problem & it's possible solution in simplified way in layman language.
+	What is an Object?
+		Object is a real world entity that has:
+			Unique Identity
+			State
+			Responsibility
+			Behavior
+	What is OOP?
+		When we do programming around object.
+		Any programming language is considered to be object oriented programming language when it follows the following pillars of OOP:
+			Abstraction - Process of setting the minimum expection from an object.
+			Encapsulation - Process of hiding the implementation details from the users.
+			Inheritance - The ability of an object to derive its state, reponsibility & behavior from another object using some relationship with the other object.
+				Types of relationship - Is A, Has A
+			Polymorphism - Ability of an object to behave differently in different contexts for the same input message.
+	Everything in .NET is object.
+	Everything in .NET derives directly or indirectly from System.Object class.
+	Objects are divided in 2 Types:
+		Value Type - System.ValueType
+			Primitive Types except string
+			enum
+			struct
+		Reference Type - System.ReferenceType
+			string
+			Arrays
+			class
+			interface
+			delegate
+When to use struct?
+	When:
+		Small, simple data object
+		No inheritance required
+		High performance required
+When to use class?
+	When:
+		Large objects
+		Need inheritance
+		Reference sharing required

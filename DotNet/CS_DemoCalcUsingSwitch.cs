@@ -33,7 +33,18 @@ namespace CS_DemoCalcUsingSwitch
 					result = x * y;
 					break;
 				case '/':
-					result = (float)x / y;
+					try
+					{
+						result = (float)x / y;
+					}
+					catch(DivideByZeroException ex)
+					{
+						Console.WriteLine("Can't divide by zero");
+					}
+					finally
+					{
+						Console.WriteLine("Execution completed. Cleaning up resources.");
+					}
 					break;
 				case '%':
 					result = x % y;

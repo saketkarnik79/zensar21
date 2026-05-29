@@ -1,0 +1,15 @@
+C:\ZensarDemos\Zensar21\Azure DevOps\CS_DemoPointers\CS_DemoPointers\bin\Debug\net10.0\CS_DemoPointers.exe
+C:\ZensarDemos\Zensar21\Azure DevOps\CS_DemoPointers\CS_DemoPointers\bin\Debug\net10.0\CS_DemoPointers.deps.json
+C:\ZensarDemos\Zensar21\Azure DevOps\CS_DemoPointers\CS_DemoPointers\bin\Debug\net10.0\CS_DemoPointers.runtimeconfig.json
+C:\ZensarDemos\Zensar21\Azure DevOps\CS_DemoPointers\CS_DemoPointers\bin\Debug\net10.0\CS_DemoPointers.dll
+C:\ZensarDemos\Zensar21\Azure DevOps\CS_DemoPointers\CS_DemoPointers\bin\Debug\net10.0\CS_DemoPointers.pdb
+C:\ZensarDemos\Zensar21\Azure DevOps\CS_DemoPointers\CS_DemoPointers\obj\Debug\net10.0\CS_DemoPointers.GeneratedMSBuildEditorConfig.editorconfig
+C:\ZensarDemos\Zensar21\Azure DevOps\CS_DemoPointers\CS_DemoPointers\obj\Debug\net10.0\CS_DemoPointers.AssemblyInfoInputs.cache
+C:\ZensarDemos\Zensar21\Azure DevOps\CS_DemoPointers\CS_DemoPointers\obj\Debug\net10.0\CS_DemoPointers.AssemblyInfo.cs
+C:\ZensarDemos\Zensar21\Azure DevOps\CS_DemoPointers\CS_DemoPointers\obj\Debug\net10.0\CS_DemoPointers.csproj.CoreCompileInputs.cache
+C:\ZensarDemos\Zensar21\Azure DevOps\CS_DemoPointers\CS_DemoPointers\obj\Debug\net10.0\CS_DemoPointers.sourcelink.json
+C:\ZensarDemos\Zensar21\Azure DevOps\CS_DemoPointers\CS_DemoPointers\obj\Debug\net10.0\CS_DemoPointers.dll
+C:\ZensarDemos\Zensar21\Azure DevOps\CS_DemoPointers\CS_DemoPointers\obj\Debug\net10.0\refint\CS_DemoPointers.dll
+C:\ZensarDemos\Zensar21\Azure DevOps\CS_DemoPointers\CS_DemoPointers\obj\Debug\net10.0\CS_DemoPointers.pdb
+C:\ZensarDemos\Zensar21\Azure DevOps\CS_DemoPointers\CS_DemoPointers\obj\Debug\net10.0\CS_DemoPointers.genruntimeconfig.cache
+C:\ZensarDemos\Zensar21\Azure DevOps\CS_DemoPointers\CS_DemoPointers\obj\Debug\net10.0\ref\CS_DemoPointers.dll
