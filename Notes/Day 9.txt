@@ -1,0 +1,281 @@
+Advanced OOP
+	• Sealed Classes, Method, Properties
+		What is sealed in C#?
+			It is a keyword that is used to restrict inheritance or overriding in C#.
+			It can be applied to:
+				class
+				method
+				property
+		Sealed class
+			class Vehicle
+			{
+				public void Start()
+				{
+					Console.WriteLine("Vehicle started...");
+				}
+			}
+			
+			sealed class Car: Vehicle
+			{
+				public string Make {get; set;}
+				public string Model {get; set;}
+			}
+			
+			class AudiCar: Car // This will cause compile-time error
+			{
+			
+			}
+		Sealed Method & Property
+			class Base
+			{
+				public virtual void Show()
+				{
+					Console.WriteLine("Base Show...");
+				}
+				
+				public virtual int Value { get; set; }
+			}
+			
+			class Derived: Base
+			{
+				public sealed override void Show()
+				{
+					Console.WriteLine("Derived Show...");
+				}
+				
+				public sealed override int Value { get; set; }
+			}
+			
+			class Another: Derived
+			{
+				public override void Show() // This will cause compile-time error
+				{
+					Console.WriteLine("Another Show...");
+				}
+				
+				public override int Value { get; set; } // This will cause compile-time error
+			}
+			
+	• Collections — ArrayList, HashTable, etc.
+		What are collections in C#?
+			Collections are classes used to store & manage groups of objects dynamically.
+		Why Collections?
+			Collections are used when:
+				Size of data is dynamically
+				Need to store multiple values
+				Require easy operation (add, remove, search, etc.)
+		Types of collections in C#
+			Non-Generic Collections - System.Collections
+				ArrayList
+				Stack
+				Queue
+				HashTable
+			Generic Collections - System.Collections.Generic
+				List<T>
+				Stack<T>
+				Queue<T>
+				Dictionary<TKey, TValue>
+				HashSet<T>
+			Specialized Collections - System.Collections.Specialized
+				NameValueCollection
+				
+		Important Operations on Collections
+			Add(element)
+			Remove(element)
+			RemoveAt(index)
+			Contains(element)
+			Count
+			Size/Capacity
+			Sort()
+			Reverse()
+			BinarySearch(element)
+		Best Practices
+			Use Generic collections always
+			Prefer List<T> over ArrayList
+			Use Dictionary<TKey, TValue> over key-vale data
+			Use HashSet for Uniqueness
+			Avoid unnecessary conversions
+	• Generics
+		public interface ICustomInterface
+		{
+			void DoSomething(int x);
+		}
+		class Box<T> where T: class, ICustomInterface
+		{
+			private T Value;
+			
+			public void SetValue(T value)
+			{
+				Value = value;
+			}
+			
+			public void DoSomething(int x)
+			{
+				// Some Code
+			}
+			
+			public void Display()
+			{
+				Console.WriteLine($"Value: {Value}");
+			}
+		}
+		
+		class Program
+		{
+			static void Main()
+			{
+				Box<int> intbox = new Box<int>();
+				intbox.SetValue(100);
+				intbox.Display();
+				
+				Box<string> stringbox = new Box<string>();
+				stringbox.SetValue("Hello");
+				stringbox.Display();
+			}
+		}
+		
+		class Pair<T1, T2>
+		{
+			public T1 First;
+			public T2 Second;
+
+			public Pair(T1 first, T2 second)
+			{
+				First = first;
+				Second = second;
+			}
+
+			public void Display()
+			{
+				Console.WriteLine($"{First} - {Second}");
+			}
+		}
+
+		class Program
+		{
+			static void Main()
+			{
+				Pair<int, string> p = new Pair<int, string>(1, "One");
+				p.Display();
+			}
+		}
+		
+		class Employee<TID>
+		{
+			private TID id;
+		}
+		
+		using System;
+
+		class Program
+		{
+			static void Print<T>(T value)
+			{
+				Console.WriteLine("Value: " + value);
+			}
+
+			static void Main()
+			{
+				Print<int>(10);
+				Print<string>("Hello");
+				Print<double>(3.14);
+			}
+		}
+		
+		class Animal { }
+
+		class Zoo<T> where T : Animal
+		{
+		}
+
+Working with Data — LINQ(Language Integrated Query)
+	• LINQ intro & queries over collections
+		What is LINQ?
+			It is a feature in C# that allows you to query collections using SQL like syntax.
+		Why LINQ?
+			Before LINQ got introduced:
+				List<int> nums = new List<int>() { 1, 2, 3, 4, 5 };
+				List<int> evens=new List<int>();
+				foreach(int n in nums)
+				{
+					if( n % 2 == 0)
+					{
+						evens.Add(n);
+					}
+				}
+			After LINQ got introduced:
+				List<int> nums = new List<int>() { 1, 2, 3, 4, 5 };
+				var evens = from n in nums
+							where n % 2 == 0
+							select n;
+		LINQ Syntax Types
+			Query Syntax
+			Method Syntax
+				List<int> nums = new List<int>() { 1, 2, 3, 4, 5 };
+				var evens = nums.Where(n => n % 2 == 0);
+				
+				
+	• Best practices & pitfalls
+		Best practices
+			Use method syntax for complex queries
+			Use ToList() or ToArray() when needed
+			Prefer strong typing
+			Use projection (Select) to optimize data
+			Use Any() instead of Count() > 0
+			Handle Nulls properly
+			Use meaningful Variable names
+			Minimize multiple enumerations
+			Use deferred execution wisely
+			Use FirstOrDefault() safely
+		Pitfalls
+			Using First() instead of FirstOrDefault()
+			Performance issues with Large Data Sets
+			Overusing LINQ
+			Ignoring deferred execution
+			Not handling Empty collections
+			Using LINQ for Side Effects
+			Nested queries causing complexity
+Entity Framework Core
+	• EF Core introduction — CRUD operations
+		What is EF Core?
+			It is an ORM for .NET.
+				It allows you to:
+					Work with databases using C# objects
+					Avoid writing raw SQL
+					Perform CRUD operations easily
+				3-Tier
+					DB -> DAL -> BL -> PL
+				3-Tier (ORM Based)
+					DB -> DAL(ORM Based) -> BL -> PL
+					
+			Without EF Core(using Traditional ADO.NET)
+				SqlCommand cmd = new SqlCommand("SELECT * FROM Students", conn);
+			With EF Core
+				var students = context.Students.ToList();
+				
+		Inmportant Terminology
+			Entity
+				class Student
+				{
+					public int Id { get; set; }
+					public string Name { get; set; }
+					public int Marks { get; set; }
+				}
+			DbContext
+				Represents a session with the database.
+				class AppDbContext : DbContext
+				{
+					public DbSet<Student> Students { get; set; }
+				}
+			DbSet
+				Represents a table in the database
+					DbSet<Student>
+			LINQ
+				var result = context.Students.Where(s => s.Marks > 70);
+		EF Core Architecture
+			Application → DbContext → EF Core → Database Provider → Database
+		Implementation Approaches in EF Core
+			Code First Approach (Most Highly Used)
+				Use Code-First Migrations to generate tables & other objects
+			Database First (2nd priority)
+				Existing database → generate models

@@ -79,45 +79,47 @@ namespace CS_DemoOOP
             //Person employee = new Employee(1, "Bob", new DateTime(1985, 3, 20), 1001, 10, 50000m);
             //Console.WriteLine(employee.Display());
 
-            AccountBase account = new SavingsAccount();
-            try
-            {
-                Console.WriteLine($"Initial balance: {account.Balance}");
-                // Deposit some money
-                account.Deposit(10000m);
-                Console.WriteLine($"Balance after deposit: {account.Balance}");
-                // Calculate the insurance premium for the account
-                if (account is ILifeInsurance insurance)
-                {
-                    decimal premium = insurance.CalculatePremium();
-                    Console.WriteLine($"Calculated insurance premium: {premium}");
-                    // Display the modified balance after deducting the premium from the account
-                    Console.WriteLine($"Balance after insurance deduction: {account.Balance}");
-                }
-                // Withdraw some money
-                account.Withdraw(5500m);
-                Console.WriteLine($"Balance after withdrawal: {account.Balance}");
-                // Attempt to withdraw more than the balance to trigger an exception
-                account.Withdraw(5000m);
-                Console.WriteLine($"Balance after withdrawal: {account.Balance}");
-            }
-            catch (ArgumentException ex)
-            {
-                Console.WriteLine($"Error: {ex.Message}");
-            }
-            catch (InvalidOperationException ex)
-            {
-                Console.WriteLine($"Error: {ex.Message}");
-            }
-            catch (Exception ex) 
-            { 
-                Console.WriteLine($"Error: {ex.Message}");
-            }
-            finally
-            {
-                Console.WriteLine("Transaction completed.");
-                Console.WriteLine("Performing cleanup if necessary...");
-            }
+            //AccountBase account = new SavingsAccount();
+            //try
+            //{
+            //    Console.WriteLine($"Initial balance: {account.Balance}");
+            //    // Deposit some money
+            //    account.Deposit(10000m);
+            //    Console.WriteLine($"Balance after deposit: {account.Balance}");
+            //    // Calculate the insurance premium for the account
+            //    if (account is ILifeInsurance insurance)
+            //    {
+            //        decimal premium = insurance.CalculatePremium();
+            //        Console.WriteLine($"Calculated insurance premium: {premium}");
+            //        // Display the modified balance after deducting the premium from the account
+            //        Console.WriteLine($"Balance after insurance deduction: {account.Balance}");
+            //    }
+            //    // Withdraw some money
+            //    account.Withdraw(5500m);
+            //    Console.WriteLine($"Balance after withdrawal: {account.Balance}");
+            //    // Attempt to withdraw more than the balance to trigger an exception
+            //    account.Withdraw(5000m);
+            //    Console.WriteLine($"Balance after withdrawal: {account.Balance}");
+            //}
+            //catch (ArgumentException ex)
+            //{
+            //    Console.WriteLine($"Error: {ex.Message}");
+            //}
+            //catch (InvalidOperationException ex)
+            //{
+            //    Console.WriteLine($"Error: {ex.Message}");
+            //}
+            //catch (Exception ex) 
+            //{ 
+            //    Console.WriteLine($"Error: {ex.Message}");
+            //}
+            //finally
+            //{
+            //    Console.WriteLine("Transaction completed.");
+            //    Console.WriteLine("Performing cleanup if necessary...");
+            //}
+
+
 
             Console.WriteLine("\nProgram is completed. Press any key to exit...");
             Console.ReadKey();

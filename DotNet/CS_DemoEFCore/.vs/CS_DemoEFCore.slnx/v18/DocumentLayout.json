@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\ZensarDemos\\Zensar21\\DotNet\\CS_DemoEFCore\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9D4A5500-60F2-6ACA-5734-C23E26E5329A}|CS_DemoEFCore\\CS_DemoEFCore.csproj|c:\\zensardemos\\zensar21\\dotnet\\cs_demoefcore\\cs_demoefcore\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D4A5500-60F2-6ACA-5734-C23E26E5329A}|CS_DemoEFCore\\CS_DemoEFCore.csproj|solutionrelative:cs_demoefcore\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\ZensarDemos\\Zensar21\\DotNet\\CS_DemoEFCore\\CS_DemoEFCore\\Program.cs",
+              "RelativeDocumentMoniker": "CS_DemoEFCore\\Program.cs",
+              "ToolTip": "C:\\ZensarDemos\\Zensar21\\DotNet\\CS_DemoEFCore\\CS_DemoEFCore\\Program.cs",
+              "RelativeToolTip": "CS_DemoEFCore\\Program.cs",
+              "ViewState": "AgIAADwAAAAAAAAAAAAAwEwAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-02T10:55:23.196Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
