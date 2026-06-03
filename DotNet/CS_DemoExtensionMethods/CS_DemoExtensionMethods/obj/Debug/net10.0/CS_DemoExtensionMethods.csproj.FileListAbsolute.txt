@@ -1,0 +1,15 @@
+C:\ZensarDemos\Zensar21\DotNet\CS_DemoExtensionMethods\CS_DemoExtensionMethods\bin\Debug\net10.0\CS_DemoExtensionMethods.exe
+C:\ZensarDemos\Zensar21\DotNet\CS_DemoExtensionMethods\CS_DemoExtensionMethods\bin\Debug\net10.0\CS_DemoExtensionMethods.deps.json
+C:\ZensarDemos\Zensar21\DotNet\CS_DemoExtensionMethods\CS_DemoExtensionMethods\bin\Debug\net10.0\CS_DemoExtensionMethods.runtimeconfig.json
+C:\ZensarDemos\Zensar21\DotNet\CS_DemoExtensionMethods\CS_DemoExtensionMethods\bin\Debug\net10.0\CS_DemoExtensionMethods.dll
+C:\ZensarDemos\Zensar21\DotNet\CS_DemoExtensionMethods\CS_DemoExtensionMethods\bin\Debug\net10.0\CS_DemoExtensionMethods.pdb
+C:\ZensarDemos\Zensar21\DotNet\CS_DemoExtensionMethods\CS_DemoExtensionMethods\obj\Debug\net10.0\CS_DemoExtensionMethods.GeneratedMSBuildEditorConfig.editorconfig
+C:\ZensarDemos\Zensar21\DotNet\CS_DemoExtensionMethods\CS_DemoExtensionMethods\obj\Debug\net10.0\CS_DemoExtensionMethods.AssemblyInfoInputs.cache
+C:\ZensarDemos\Zensar21\DotNet\CS_DemoExtensionMethods\CS_DemoExtensionMethods\obj\Debug\net10.0\CS_DemoExtensionMethods.AssemblyInfo.cs
+C:\ZensarDemos\Zensar21\DotNet\CS_DemoExtensionMethods\CS_DemoExtensionMethods\obj\Debug\net10.0\CS_DemoExtensionMethods.csproj.CoreCompileInputs.cache
+C:\ZensarDemos\Zensar21\DotNet\CS_DemoExtensionMethods\CS_DemoExtensionMethods\obj\Debug\net10.0\CS_DemoExtensionMethods.sourcelink.json
+C:\ZensarDemos\Zensar21\DotNet\CS_DemoExtensionMethods\CS_DemoExtensionMethods\obj\Debug\net10.0\CS_DemoExtensionMethods.dll
+C:\ZensarDemos\Zensar21\DotNet\CS_DemoExtensionMethods\CS_DemoExtensionMethods\obj\Debug\net10.0\refint\CS_DemoExtensionMethods.dll
+C:\ZensarDemos\Zensar21\DotNet\CS_DemoExtensionMethods\CS_DemoExtensionMethods\obj\Debug\net10.0\CS_DemoExtensionMethods.pdb
+C:\ZensarDemos\Zensar21\DotNet\CS_DemoExtensionMethods\CS_DemoExtensionMethods\obj\Debug\net10.0\CS_DemoExtensionMethods.genruntimeconfig.cache
+C:\ZensarDemos\Zensar21\DotNet\CS_DemoExtensionMethods\CS_DemoExtensionMethods\obj\Debug\net10.0\ref\CS_DemoExtensionMethods.dll

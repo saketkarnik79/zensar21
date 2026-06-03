@@ -1,0 +1,438 @@
+Asynchronous Programming
+	What is Asynchronous Programming?
+		Asynchronous programming allows your program to run long-running operations without blocking the main thread(UI Thread or Execution Thread).
+		
+		
+	• Async programming concepts — async/await keywords
+		Problematic Synchronous Code
+			static void Main()
+			{
+				Console.WriteLine("Start");
+
+				LongTask();   // blocks execution
+
+				Console.WriteLine("End");
+			}
+
+			static void LongTask()
+			{
+				Thread.Sleep(5000);  // 5 seconds delay
+			}
+			
+		Solution:
+			using System;
+			using System.Threading.Tasks;
+
+			class Program
+			{
+				static async Task Main()
+				{
+					Console.WriteLine("Start");
+
+					await DoWorkAsync();
+
+					Console.WriteLine("End");
+				}
+
+				static async Task DoWorkAsync()
+				{
+					Console.WriteLine("Working...");
+					await Task.Delay(5000);
+					Console.WriteLine("Done!");
+				}
+			}
+		Performance Benefits
+			Non-Blocking UI
+			Efficient Thread Usage
+			Better Scalability
+			Faster App Responsiveness
+	• Task-based Asynchronous Pattern (TAP)
+		What is TAP?
+			TAP is the recommended async programming model in .NET that uses:
+				Task
+				Task<T>
+				async/await
+		Advantages of TAP
+			Simple Syntax
+			Readable Code
+			Strong & simple integration with async/await
+			Composable
+	• Handling async exceptions
+		Why exception handling is different in Async?
+			async Task TestAsync()
+			{
+				throw new Exception("Error occurred");
+			}
+			
+			await TestAsync();  // exception occurs here
+			
+			
+			using System;
+			using System.Threading.Tasks;
+
+			class Program
+			{
+				static async Task Main()
+				{
+					try
+					{
+						await ThrowErrorAsync();
+					}
+					catch (Exception ex)
+					{
+						Console.WriteLine("Caught Error: " + ex.Message);
+					}
+				}
+
+				static async Task ThrowErrorAsync()
+				{
+					await Task.Delay(1000);
+					throw new Exception("Something went wrong!");
+				}
+			}
+			
+			
+			using System;
+			using System.Threading.Tasks;
+
+			class Program
+			{
+				static async Task Main()
+				{
+					Task t1 = Task1();
+					Task t2 = Task2();
+
+					try
+					{
+						await Task.WhenAll(t1, t2);
+					}
+					catch (Exception ex)
+					{
+						Console.WriteLine("Exception: " + ex.Message);
+					}
+				}
+
+				static async Task Task1()
+				{
+					await Task.Delay(1000);
+					throw new Exception("Error in Task1");
+				}
+
+				static async Task Task2()
+				{
+					await Task.Delay(1500);
+					throw new Exception("Error in Task2");
+				}
+			}
+			
+			
+			try
+			{
+				await Task.WhenAll(t1, t2);
+			}
+			catch
+			{
+				if (t1.Exception != null)
+					Console.WriteLine(t1.Exception.InnerException.Message);
+
+				if (t2.Exception != null)
+					Console.WriteLine(t2.Exception.InnerException.Message);
+			}
+	• Best practices & pitfalls
+		Best Practices
+			Always use try-catch with await
+			Always await tasks
+			Handle multiple task exceptions properly
+			Use FirstOrDefault() instead of First() in Async pipelines
+				var item = await GetItemsAsync()
+                   .ContinueWith(t => t.Result.FirstOrDefault());
+			Use async Task instead of async void 
+			Log exception centrally
+			Use proper exception types
+			Handle cancellation separately
+			Use ConfigureAwait(false)
+			Use retry logic for transient failures
+		Common Pitfalls
+			Not awaiting async methods
+			Using .Result or .Wait()
+			Assuming exception happens immediately
+			Ignoring AggregateException
+			Not checking task state
+			Mixing sync & async code
+			Overloading try-catch
+				catch (Exception) // Overloaded
+				{
+				}
+				
+				catch (Exception ex) // Right way
+				{
+					Console.WriteLine(ex.Message);
+				}
+			Forgetting exception propagation
+		
+		try
+		{
+			var userTask = GetUserAsync();
+			var ordersTask = GetOrdersAsync();
+
+			await Task.WhenAll(userTask, ordersTask);
+
+			Console.WriteLine(await userTask);
+		}
+		catch (TaskCanceledException ex)
+		{
+			Console.WriteLine("Operation cancelled");
+		}
+		catch (Exception ex)
+		{
+			Console.WriteLine("Error: " + ex.Message);
+		}
+
+
+Advanced C# Features
+	• Delegates & lambda expressions
+		What is a delegate?
+			A delegate is a type that represents a reference to a method.
+		When to use delegates?
+			You need dynamic method execution
+			You want plug & play behavior
+			Implementing:
+				Callbacks
+				Events
+				Strategy
+		What is an anonymous method?
+			An anonymous method is a method without a name, defined using the delegate keyword.
+	• Events & event-driven programming
+		What is event-driven programming?
+			Event-driven programming is where program flow is controlled by events.
+	• Extension methods
+		What are extension methods?
+			Extension methods allow you to add new methods to an existing type without modifying the original type or creating a new derived class.
+			
+	• Nullable value types & Nullable reference types & null safety
+		Person? p; //allowed before C# 8.0
+		string? name; //allowed before C# 8.0
+		int x; // Default value is 0
+		int y=null; // Compile time error
+		int? z=null;
+		if(z.HasValue)
+		{
+			x=z.Value;
+		}
+		
+		x = z ?? 0;
+		
+	• Records and init-only properties (.NET 5+)
+		What is record type?
+			A class optimized for storing data with built-in immutability & value comparison.
+			
+			class Person
+			{
+				public string Name { get; set; }
+				public int Age { get; set; }
+			}
+			Person p1=new Person(){ Name = "X", Age=20 };
+			Person p2=new Person(){ Name = "X", Age=20 };
+			Console.WriteLine(p1 == p2); // False
+			
+			record Person(string Name, int Age); // Positional Record
+			Person p1=new Person(){ Name = "X", Age=20 };
+			Person p2=new Person(){ Name = "X", Age=20 };
+			Console.WriteLine(p1 == p2); // True
+			
+			
+			record struct Person //Full Record
+			{
+				public string Name { get; init; }
+				public int Age { get; init; }
+				
+				public void Display()
+				{
+					Console.WriteLine($"{Name} - {Age}");
+				}
+			}
+			Person p1=new Person() { Name = "James", Age=50 };
+			p1.Name = "James Bond"; //Not allowed
+			p1.Age = 55; //Not Allowed
+			Person p2 = p1 with { Age=55};
+			
+			var (name, age) = p1;
+			
+	• Pattern matching & switch expressions
+		What is pattern matching?
+			It allows you to check a value & extract information from it in a clean, readable & type-safe way.
+				object obj = 10; // boxing
+
+				if (obj is int) // type checking
+				{
+					int num = (int)obj; // unboxing
+					Console.WriteLine(num);
+				}
+				
+				
+				object obj = 10; //boxing
+				if (obj is int num) // type checking & unboxing (pattern matching)
+				{
+					Console.WriteLine(num);
+				}
+		
+		Types of pattern matching
+			Type pattern
+				object obj = "Hello";
+
+				if (obj is string text)
+				{
+					Console.WriteLine(text.ToUpper());
+				}
+			Constant Pattern
+				int num = 10;
+
+				if (num is 10)
+				{
+					Console.WriteLine("Number is 10");
+				}
+			Relational Pattern
+				int age = 25;
+
+				if (age is > 18 and < 30)
+				{
+					Console.WriteLine("Young Adult");
+				}
+			Logical Pattern
+				int num = 15;
+
+				if (num is > 10 and < 20)
+				{
+					Console.WriteLine("Between 10 and 20");
+				}
+			Null Pattern
+				string name = null;
+
+				if (name is null)
+				{
+					Console.WriteLine("Name is null");
+				}
+			Property Pattern
+				class Person
+				{
+					public string Name { get; set; }
+					public int Age { get; set; }
+				}
+
+				Person p = new Person { Name = "Saket", Age = 25 };
+
+				if (p is { Age: > 18 })
+				{
+					Console.WriteLine("Adult");
+				}
+			Positional Pattern
+				record Person(string Name, int Age, string place);
+
+				var p = new Person("Saket", 25, "Gujarat");
+
+				if (p is ("Saket", > 20))
+				{
+					Console.WriteLine("Match found");
+				}
+		Switch Pattern
+			int num = 2;
+
+			switch (num)
+			{
+				case 1:
+					Console.WriteLine("One");
+					break;
+			}
+			
+			object obj = "Saket";
+
+			switch (obj)
+			{
+				case int x:
+					Console.WriteLine("Integer: " + x);
+					break;
+
+				case string s:
+					Console.WriteLine("String: " + s);
+					break;
+			}
+		Switch Expression
+			var result = value switch
+			{
+				pattern1 => result1,
+				pattern2 => result2,
+				_ => defaultValue
+			};
+			
+			int day = 2;
+			string result = day switch
+			{
+				1 => "Monday",
+				2 => "Tuesday",
+				3 => "Wednesday",
+				_ => "Invalid"
+			};
+
+			Console.WriteLine(result);
+			
+			
+			int age = 25;
+			string category = age switch
+			{
+				< 18 => "Minor",
+				>= 18 and < 60 => "Adult",
+				>= 60 => "Senior"
+			};
+
+			Console.WriteLine(category);
+
+			class Order
+			{
+				public decimal Amount { get; set; }
+			}
+
+			class Program
+			{
+				static void Main()
+				{
+					Order order = new Order { Amount = 1200 };
+
+					string category = order switch
+					{
+						{ Amount: < 500 } => "Small Order",
+						{ Amount: >= 500 and < 1000 } => "Medium Order",
+						{ Amount: >= 1000 } => "Large Order"
+					};
+
+					Console.WriteLine(category);
+				}
+			}
+			
+			
+			object obj = new Person();
+			string result = obj switch
+			{
+				int x => $"Integer: {x}",
+				string s => $"String: {s}",
+				null => "Null value",
+				Person p => $"Object is of Person Type - Id: {p.Id}, Name: {p.Name}",
+				_ => "Unknown type"
+			};
+
+			Console.WriteLine(result);
+			
+			
+			int num = 15;
+			string result = num switch
+			{
+				int x when x % 2 == 0 => "Even",
+				int x when x % 2 != 0 => "Odd"
+			};
+			Console.WriteLine(result);
+			
+		Best practices:
+			Use switch expressions for simple value mapping
+			Use pattern matching for type safety
+			Keep patterns readable
+			Use _(default case) always
+			Prefer relational patterns for ranges

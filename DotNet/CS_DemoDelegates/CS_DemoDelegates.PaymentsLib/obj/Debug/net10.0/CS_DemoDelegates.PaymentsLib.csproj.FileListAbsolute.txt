@@ -1,0 +1,12 @@
+C:\ZensarDemos\Zensar21\DotNet\CS_DemoDelegates\CS_DemoDelegates.PaymentsLib\bin\Debug\net10.0\CS_DemoDelegates.PaymentsLib.deps.json
+C:\ZensarDemos\Zensar21\DotNet\CS_DemoDelegates\CS_DemoDelegates.PaymentsLib\bin\Debug\net10.0\CS_DemoDelegates.PaymentsLib.dll
+C:\ZensarDemos\Zensar21\DotNet\CS_DemoDelegates\CS_DemoDelegates.PaymentsLib\bin\Debug\net10.0\CS_DemoDelegates.PaymentsLib.pdb
+C:\ZensarDemos\Zensar21\DotNet\CS_DemoDelegates\CS_DemoDelegates.PaymentsLib\obj\Debug\net10.0\CS_DemoDelegates.PaymentsLib.GeneratedMSBuildEditorConfig.editorconfig
+C:\ZensarDemos\Zensar21\DotNet\CS_DemoDelegates\CS_DemoDelegates.PaymentsLib\obj\Debug\net10.0\CS_DemoDelegates.PaymentsLib.AssemblyInfoInputs.cache
+C:\ZensarDemos\Zensar21\DotNet\CS_DemoDelegates\CS_DemoDelegates.PaymentsLib\obj\Debug\net10.0\CS_DemoDelegates.PaymentsLib.AssemblyInfo.cs
+C:\ZensarDemos\Zensar21\DotNet\CS_DemoDelegates\CS_DemoDelegates.PaymentsLib\obj\Debug\net10.0\CS_DemoDelegates.PaymentsLib.csproj.CoreCompileInputs.cache
+C:\ZensarDemos\Zensar21\DotNet\CS_DemoDelegates\CS_DemoDelegates.PaymentsLib\obj\Debug\net10.0\CS_DemoDelegates.PaymentsLib.sourcelink.json
+C:\ZensarDemos\Zensar21\DotNet\CS_DemoDelegates\CS_DemoDelegates.PaymentsLib\obj\Debug\net10.0\CS_DemoDelegates.PaymentsLib.dll
+C:\ZensarDemos\Zensar21\DotNet\CS_DemoDelegates\CS_DemoDelegates.PaymentsLib\obj\Debug\net10.0\refint\CS_DemoDelegates.PaymentsLib.dll
+C:\ZensarDemos\Zensar21\DotNet\CS_DemoDelegates\CS_DemoDelegates.PaymentsLib\obj\Debug\net10.0\CS_DemoDelegates.PaymentsLib.pdb
+C:\ZensarDemos\Zensar21\DotNet\CS_DemoDelegates\CS_DemoDelegates.PaymentsLib\obj\Debug\net10.0\ref\CS_DemoDelegates.PaymentsLib.dll

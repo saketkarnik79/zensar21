@@ -1,0 +1,15 @@
+C:\ZensarDemos\Zensar21\DotNet\CS_DemoEvents\CS_DemoEvents\bin\Debug\net10.0\CS_DemoEvents.exe
+C:\ZensarDemos\Zensar21\DotNet\CS_DemoEvents\CS_DemoEvents\bin\Debug\net10.0\CS_DemoEvents.deps.json
+C:\ZensarDemos\Zensar21\DotNet\CS_DemoEvents\CS_DemoEvents\bin\Debug\net10.0\CS_DemoEvents.runtimeconfig.json
+C:\ZensarDemos\Zensar21\DotNet\CS_DemoEvents\CS_DemoEvents\bin\Debug\net10.0\CS_DemoEvents.dll
+C:\ZensarDemos\Zensar21\DotNet\CS_DemoEvents\CS_DemoEvents\bin\Debug\net10.0\CS_DemoEvents.pdb
+C:\ZensarDemos\Zensar21\DotNet\CS_DemoEvents\CS_DemoEvents\obj\Debug\net10.0\CS_DemoEvents.GeneratedMSBuildEditorConfig.editorconfig
+C:\ZensarDemos\Zensar21\DotNet\CS_DemoEvents\CS_DemoEvents\obj\Debug\net10.0\CS_DemoEvents.AssemblyInfoInputs.cache
+C:\ZensarDemos\Zensar21\DotNet\CS_DemoEvents\CS_DemoEvents\obj\Debug\net10.0\CS_DemoEvents.AssemblyInfo.cs
+C:\ZensarDemos\Zensar21\DotNet\CS_DemoEvents\CS_DemoEvents\obj\Debug\net10.0\CS_DemoEvents.csproj.CoreCompileInputs.cache
+C:\ZensarDemos\Zensar21\DotNet\CS_DemoEvents\CS_DemoEvents\obj\Debug\net10.0\CS_DemoEvents.sourcelink.json
+C:\ZensarDemos\Zensar21\DotNet\CS_DemoEvents\CS_DemoEvents\obj\Debug\net10.0\CS_DemoEvents.dll
+C:\ZensarDemos\Zensar21\DotNet\CS_DemoEvents\CS_DemoEvents\obj\Debug\net10.0\refint\CS_DemoEvents.dll
+C:\ZensarDemos\Zensar21\DotNet\CS_DemoEvents\CS_DemoEvents\obj\Debug\net10.0\CS_DemoEvents.pdb
+C:\ZensarDemos\Zensar21\DotNet\CS_DemoEvents\CS_DemoEvents\obj\Debug\net10.0\CS_DemoEvents.genruntimeconfig.cache
+C:\ZensarDemos\Zensar21\DotNet\CS_DemoEvents\CS_DemoEvents\obj\Debug\net10.0\ref\CS_DemoEvents.dll

@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "CS_DemoDelegates/1.0.0": {
+        "dependencies": {
+          "CS_DemoDelegates.PaymentsLib": "1.0.0"
+        },
+        "runtime": {
+          "CS_DemoDelegates.dll": {}
+        }
+      },
+      "CS_DemoDelegates.PaymentsLib/1.0.0": {
+        "runtime": {
+          "CS_DemoDelegates.PaymentsLib.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CS_DemoDelegates/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CS_DemoDelegates.PaymentsLib/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

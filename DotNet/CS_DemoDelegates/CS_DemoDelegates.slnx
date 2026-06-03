@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="CS_DemoDelegates.PaymentsLib/CS_DemoDelegates.PaymentsLib.csproj" />
+  <Project Path="CS_DemoDelegates/CS_DemoDelegates.csproj" />
+</Solution>
