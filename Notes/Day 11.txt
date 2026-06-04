@@ -1,0 +1,453 @@
+Object Relationships (Is A, Has A, Uses A)
+	Association
+		What is Association?
+			Assoication is a general relationship where one object uses or interacts with another.
+			A Teacher interacts with student.
+				class Student
+				{
+					public string Name { get; set; }
+				}
+				
+				class Teacher
+				{
+					public void Teach(Student student)
+					{
+						Console.WriteLine($"Teaching: {student.Name}");
+					}
+				}
+				Main()
+				{
+					Student s=new Student();
+					Teacher t=new Teacher();
+					t.Teach();
+				}
+	Aggregation (Has A, Weaker Relation)(Containment)
+		What is Aggregation?
+			Aggregation is a form of Association where one class contains another object, but the contained object can exist independently.
+			A Department has Employees, but Employees can exist without the department.
+				class Employee
+				{
+					public string Name { get; set; }
+				}
+				
+				class Department
+				{
+					public List<Employee> Employees { get; set; }
+					
+					public Department()
+					{
+						Employees = new List<Employees>();
+					}
+				}
+	Composition (Has A, Stronger Relation)
+		What is Composition?
+			Composition is a strong form of Aggregation where the contained object cannot exist independently.
+			A House has Rooms. If the house is destroyed, rooms don't exist.
+			class Room
+			{
+				public string Type { get; set; }
+			}
+			
+			class House
+			{
+				private List<Room> rooms = new List<Room>();
+				
+				public House()
+				{
+					rooms.Add(new Room() { Type = "Living" });
+					rooms.Add(new Room() { Type = "Kitchen" });
+					rooms.Add(new Room() { Type = "Store" });
+				}
+			}
+			
+	Inheritance (Is A Relation)
+		What is Inheritance?
+			Inheritance is an ability of a class deriving its properties & methods from another class.
+			A Car Is A Vehicle.
+			class Vehicle
+			{
+				public void Start()
+				{
+					
+				}
+			}
+			
+			class Car : Vehicle
+			{
+				public void Drive()
+				{
+				
+				}
+			}
+		
+	Dependency (Uses A Relation)
+		What is Dependency?
+			Dependency is when one class temporarily depends on another class, usually via method parameters.
+			
+			class Logger
+			{
+				public void Log(string message)
+				{
+					// Logging Logic
+				}
+			}
+			
+			class OrderService
+			{
+				public void ProcessOrder(Logger logger)
+				{
+					logger.Log("Order processed.")
+				}
+			}
+Covariance & Contravariance
+	What are Covariance & Contravariance?
+		Covariance & Contravariance in C# are type-compatibility features that allow you to use more flexible type substitutions ehen working with generic interfaces & delegates.
+		Generic interfaces are invariant by default.
+			IEnumerable<string> ≠ IEnumerable<object>
+		Covariance & ContraVariance allow this kind of assignment safely, under certain conditions.
+		What is Covariance? (out keyword)
+			Covariance allows you to use a more derived type than originally specified.
+				IEnumerable<string> strings = new List<string>();
+				IEnumerable<object> objects = strings; // Valid due to covariance
+				Why this works?
+					Because:
+						IEnumerable<T> is read-only
+						It only produces (returns) T
+						It never consumes (accepts) T
+				public interface IEnumerable<out T>
+				{
+					T GetEnumerator();
+					void Add(T item); // Not allowed
+				}
+		What is Contravariance? (in keyword)
+			Contravariance allows you to use a less derived type than originally specified.
+				Action<object> actObject = (x) => Console.WriteLine(x);
+				Action<string> actString = actObject; // Valid due to Contravariance
+				actString("Hello");
+				Why this works?
+					Because:
+						Action<T> consumes T
+						It doesn't return T
+						It only takes parameters
+					public interface IComparer<in T>
+					{
+						int Compare(T x, T y);
+						T Get(); // Not Allowed
+					}
+
+
+Design Patterns in Practice
+	What are design patterns?
+		Design patterns are reusable, proven solutions to commonly occuring problems in software design. They are not complete code but templates or blueprints that guide how to structure code for better flexibility, scalability & maintainability.
+	Why design patterns matter?
+		Benefits:
+			Improve code reusability
+			Enhance readability & maintainability
+			Promote loosely coupled design
+			Provide a common vocabulary for developers
+			Reduce development time (reusing proven solutions)
+	When to use Design patterns?
+		Problems are repititive
+		Code becomes hard to maintainability
+		You need flexibility & scalability
+	What are GoF Design Patterns?
+		GoF(Gang of Four) design patterns refer to the 23 classic design patterns.
+			GoF design patterns are devided in 3 categories:
+				Creational Patterns
+					Singleton
+					Factory Method
+					Abstract Factory
+					Builder
+					Prototype
+				Structural Patterns
+					Adapter
+					Bridge
+					Composite
+					Decorator
+					Façade
+					Flyweight
+					Proxy
+				Behavioural Patterns
+					Chain of Responsibility
+					Command
+					Interpreter
+					Iterator
+					Mediator
+					Memento
+					Observer
+					State
+					Strategy
+					Template Method
+					Visitor
+			Key characteristic of GoF patterns
+				Language agnostic
+				Based on OOP principles
+				Promote:
+					Loose coupling
+					Maintainability
+					High cohesion
+				Not code, but design templates
+	• Creational — Factory, Singleton
+	• Structural — Repository, Decorator
+	• Behavioural — Strategy, Observer
+	• Anti-patterns
+		What are anti-patterns?
+			Anti-patterns are common but ineffective or counter-productive solutions to recurring problems in software design.
+		Why anti-patterns matter?
+			Helps you:
+				Recognizing bad design early
+				Avoid costly mistakes
+				Refactor existing code
+				Improve maintainability & scalability
+		Common types of Anti-Patterns
+			God Object(Blob)
+				One class does too many things.
+					class OrderManager
+					{
+						public void CreateOrder() { }
+						public void ProcessPayment() { }
+						public void SendEmail() { }
+						public void GenerateInvoice() { }
+					}
+			Spaghetti Code
+				Code with no clear structure or flow.
+					if (a)
+					{
+						if (b)
+						{
+							if (c)
+							{
+								// deeply nested logic
+							}
+						}
+					}
+			Copy-Paste Programming
+				Repeating the same code everywhere
+			Golden Hammer
+				Using a familiar tool/design pattern everywhere.
+			Premature Optimization
+				Optimizing code before it's necessary.
+			Lava Flow
+				Old, unused code remains in system.
+			Hard Coding
+				Values directly written into code.
+			Tight Coupling
+				Classes depend heavily on each other.
+					class A
+					{
+						private B b = new B();
+					}
+			Magic Numbers
+				Using unexplained numeric values.
+			Reinventing the Wheel
+				Building something that already exists.
+				
+	• When to use patterns — avoiding over-engineering
+		
+	• S.O.L.I.D. principles applied to real code
+		S - SRP - Single Responsibility Principle
+			A class should have only one reason to change.
+				
+				class Invoice // SRP Violated
+				{
+					public void CalculateTotal() { }
+					public void PrintInvoice() { }
+					public void SaveToDatabase() { }
+				}
+				
+				// SRP Followed
+				class Invoice
+				{
+					public void CalculateTotal() { }
+				}
+
+				class InvoicePrinter
+				{
+					public void Print(Invoice invoice) { }
+				}
+
+				class InvoiceRepository
+				{
+					public void Save(Invoice invoice) { }
+				}
+
+		O - OCP - Open/Closed Principle
+			Software entities should be Open for extension but closed for modification.
+				// OCP Violation
+				class PaymentProcessor
+				{
+					public void Pay(string type)
+					{
+						if (type == "CC") { }
+						else if (type == "UPI") { }
+					}
+				}
+				
+				// OCP Compliant
+				interface IPayment
+				{
+					void Pay();
+				}
+
+				class CreditCard : IPayment
+				{
+					public void Pay() { }
+				}
+
+				class Upi : IPayment
+				{
+					public void Pay() { }
+				}
+
+				class PaymentProcessor
+				{
+					public void Process(IPayment payment)
+					{
+						payment.Pay();
+					}
+				}
+
+		L - LSP - Liskov Substitution Principle
+			Derived classes must be substitutable for their base classes without breaking the behavior.
+				// LSP Violated
+				class Bird
+				{
+					public virtual void Fly() { }
+				}
+
+				class Ostrich : Bird
+				{
+					public override void Fly()
+					{
+						throw new Exception("Cannot fly");
+					}
+				}
+				
+				// LSP Followed
+				interface IBird 
+				{ 
+					void MakeSound();
+				}
+
+				interface IFlyingBird
+				{
+					void Fly();
+				}
+
+				class Sparrow : IBird, IFlyingBird
+				{
+					public void MakeSound() { }
+					
+					public void Fly() { }
+				}
+
+				class Ostrich : IBird
+				{
+					public void MakeSound() { }
+				}
+				
+				public void Act(IBird bird)
+				{
+					bird.MakeSound();
+				}
+				
+				public void TakeFlight(IFlyingBird bird)
+				{
+					bird.Fly();
+				}
+
+		I - ISP - Interface Segregation Principle
+			Clients should not be forced to depend on interface they don't use.
+			// ISP Violated
+			interface IWorker
+			{
+				void Work();
+				void Eat();
+			}
+			
+			class HumanWorker:IWorker
+			{
+				public void Work() { }
+				public void Eat() { }
+			}
+
+			class Robot : IWorker
+			{
+				public void Work() { }
+				public void Eat() { throw new Exception(); }
+			}
+			
+			// ISP Followed
+			interface IWorkable
+			{
+				void Work();
+			}
+			
+			interface IEatable
+			{
+				void Eat();
+			}
+			
+			class HumanWorker:IWorkable, IEatable
+			{
+				public void Work() { }
+				public void Eat() { }
+			}
+
+			class Robot : IWorkable
+			{
+				public void Work() { }
+			}
+
+		D - DIP - Dependency Inversion Principle
+			High-level modules should not depend on low-level modules.
+			Both should depend on abstractions.
+			
+			// DIP Violated
+			class MySQLDatabase
+			{
+				public void Save() { }
+			}
+
+			class OrderService
+			{
+				private MySQLDatabase db = new MySQLDatabase(); // Hard dependency
+
+				public void PlaceOrder()
+				{
+					db.Save();
+				}
+			}
+			
+			// DIP Followed
+			interface IDatabase
+			{
+				void Save();
+			}
+
+			class MySQLDatabase : One complete 
+			{
+				public void Save() { }
+			}
+			
+			class MyOracleDatabase : IDatabase
+			{
+				public void Save() { }
+			}
+
+			class OrderService
+			{
+				private readonly IDatabase db;
+
+				public OrderService(IDatabase db) // Loose coupling(Loose dependency)
+				{
+					this.db = db;
+				}
+
+				public void PlaceOrder()
+				{
+					db.Save();
+				}
+			}
+			
+			var service = new OrderService(new MySQLDatabase());

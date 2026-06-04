@@ -1,0 +1,15 @@
+C:\ZensarDemos\Zensar21\DotNet\CS_DemoGoFPatterns\CS_DemoGoFPatterns\bin\Debug\net10.0\CS_DemoGoFPatterns.exe
+C:\ZensarDemos\Zensar21\DotNet\CS_DemoGoFPatterns\CS_DemoGoFPatterns\bin\Debug\net10.0\CS_DemoGoFPatterns.deps.json
+C:\ZensarDemos\Zensar21\DotNet\CS_DemoGoFPatterns\CS_DemoGoFPatterns\bin\Debug\net10.0\CS_DemoGoFPatterns.runtimeconfig.json
+C:\ZensarDemos\Zensar21\DotNet\CS_DemoGoFPatterns\CS_DemoGoFPatterns\bin\Debug\net10.0\CS_DemoGoFPatterns.dll
+C:\ZensarDemos\Zensar21\DotNet\CS_DemoGoFPatterns\CS_DemoGoFPatterns\bin\Debug\net10.0\CS_DemoGoFPatterns.pdb
+C:\ZensarDemos\Zensar21\DotNet\CS_DemoGoFPatterns\CS_DemoGoFPatterns\obj\Debug\net10.0\CS_DemoGoFPatterns.GeneratedMSBuildEditorConfig.editorconfig
+C:\ZensarDemos\Zensar21\DotNet\CS_DemoGoFPatterns\CS_DemoGoFPatterns\obj\Debug\net10.0\CS_DemoGoFPatterns.AssemblyInfoInputs.cache
+C:\ZensarDemos\Zensar21\DotNet\CS_DemoGoFPatterns\CS_DemoGoFPatterns\obj\Debug\net10.0\CS_DemoGoFPatterns.AssemblyInfo.cs
+C:\ZensarDemos\Zensar21\DotNet\CS_DemoGoFPatterns\CS_DemoGoFPatterns\obj\Debug\net10.0\CS_DemoGoFPatterns.csproj.CoreCompileInputs.cache
+C:\ZensarDemos\Zensar21\DotNet\CS_DemoGoFPatterns\CS_DemoGoFPatterns\obj\Debug\net10.0\CS_DemoGoFPatterns.sourcelink.json
+C:\ZensarDemos\Zensar21\DotNet\CS_DemoGoFPatterns\CS_DemoGoFPatterns\obj\Debug\net10.0\CS_DemoGoFPatterns.dll
+C:\ZensarDemos\Zensar21\DotNet\CS_DemoGoFPatterns\CS_DemoGoFPatterns\obj\Debug\net10.0\refint\CS_DemoGoFPatterns.dll
+C:\ZensarDemos\Zensar21\DotNet\CS_DemoGoFPatterns\CS_DemoGoFPatterns\obj\Debug\net10.0\CS_DemoGoFPatterns.pdb
+C:\ZensarDemos\Zensar21\DotNet\CS_DemoGoFPatterns\CS_DemoGoFPatterns\obj\Debug\net10.0\CS_DemoGoFPatterns.genruntimeconfig.cache
+C:\ZensarDemos\Zensar21\DotNet\CS_DemoGoFPatterns\CS_DemoGoFPatterns\obj\Debug\net10.0\ref\CS_DemoGoFPatterns.dll
