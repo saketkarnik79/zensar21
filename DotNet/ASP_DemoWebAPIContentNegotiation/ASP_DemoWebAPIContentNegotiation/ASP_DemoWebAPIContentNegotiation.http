@@ -1,0 +1,6 @@
+@ASP_DemoWebAPIContentNegotiation_HostAddress = http://localhost:5177
+
+GET {{ASP_DemoWebAPIContentNegotiation_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

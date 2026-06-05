@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "ASP_DemoMVC/1.0.0": {
+        "runtime": {
+          "ASP_DemoMVC.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ASP_DemoMVC/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

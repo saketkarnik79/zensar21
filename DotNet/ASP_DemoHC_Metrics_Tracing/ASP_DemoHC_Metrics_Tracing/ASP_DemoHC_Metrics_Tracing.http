@@ -1,0 +1,6 @@
+@ASP_DemoHC_Metrics_Tracing_HostAddress = http://localhost:5146
+
+GET {{ASP_DemoHC_Metrics_Tracing_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

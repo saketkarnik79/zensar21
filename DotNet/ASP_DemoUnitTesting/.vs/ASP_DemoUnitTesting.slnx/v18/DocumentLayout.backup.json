@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\ZensarDemos\\Zensar21\\DotNet\\ASP_DemoUnitTesting\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6646DF6F-28D1-4808-9FE1-C64CFC40AC35}|ASP_DemoUnitTesting.Tests\\ASP_DemoUnitTesting.Tests.csproj|c:\\zensardemos\\zensar21\\dotnet\\asp_demounittesting\\asp_demounittesting.tests\\orderservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6646DF6F-28D1-4808-9FE1-C64CFC40AC35}|ASP_DemoUnitTesting.Tests\\ASP_DemoUnitTesting.Tests.csproj|solutionrelative:asp_demounittesting.tests\\orderservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F98DB00-6473-4AC0-99DD-0EDBBF2D3503}|ASP_DemoUnitTesting\\ASP_DemoUnitTesting.csproj|c:\\zensardemos\\zensar21\\dotnet\\asp_demounittesting\\asp_demounittesting\\services\\iorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F98DB00-6473-4AC0-99DD-0EDBBF2D3503}|ASP_DemoUnitTesting\\ASP_DemoUnitTesting.csproj|solutionrelative:asp_demounittesting\\services\\iorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F98DB00-6473-4AC0-99DD-0EDBBF2D3503}|ASP_DemoUnitTesting\\ASP_DemoUnitTesting.csproj|c:\\zensardemos\\zensar21\\dotnet\\asp_demounittesting\\asp_demounittesting\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F98DB00-6473-4AC0-99DD-0EDBBF2D3503}|ASP_DemoUnitTesting\\ASP_DemoUnitTesting.csproj|solutionrelative:asp_demounittesting\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IOrderService.cs",
+              "DocumentMoniker": "C:\\ZensarDemos\\Zensar21\\DotNet\\ASP_DemoUnitTesting\\ASP_DemoUnitTesting\\Services\\IOrderService.cs",
+              "RelativeDocumentMoniker": "ASP_DemoUnitTesting\\Services\\IOrderService.cs",
+              "ToolTip": "C:\\ZensarDemos\\Zensar21\\DotNet\\ASP_DemoUnitTesting\\ASP_DemoUnitTesting\\Services\\IOrderService.cs",
+              "RelativeToolTip": "ASP_DemoUnitTesting\\Services\\IOrderService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-05T10:29:35.651Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "OrderServiceTests.cs",
+              "DocumentMoniker": "C:\\ZensarDemos\\Zensar21\\DotNet\\ASP_DemoUnitTesting\\ASP_DemoUnitTesting.Tests\\OrderServiceTests.cs",
+              "RelativeDocumentMoniker": "ASP_DemoUnitTesting.Tests\\OrderServiceTests.cs",
+              "ToolTip": "C:\\ZensarDemos\\Zensar21\\DotNet\\ASP_DemoUnitTesting\\ASP_DemoUnitTesting.Tests\\OrderServiceTests.cs",
+              "RelativeToolTip": "ASP_DemoUnitTesting.Tests\\OrderServiceTests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-05T10:20:39.339Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "OrderService.cs",
+              "DocumentMoniker": "C:\\ZensarDemos\\Zensar21\\DotNet\\ASP_DemoUnitTesting\\ASP_DemoUnitTesting\\Services\\OrderService.cs",
+              "RelativeDocumentMoniker": "ASP_DemoUnitTesting\\Services\\OrderService.cs",
+              "ToolTip": "C:\\ZensarDemos\\Zensar21\\DotNet\\ASP_DemoUnitTesting\\ASP_DemoUnitTesting\\Services\\OrderService.cs",
+              "RelativeToolTip": "ASP_DemoUnitTesting\\Services\\OrderService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-05T10:18:12.004Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

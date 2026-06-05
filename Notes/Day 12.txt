@@ -1,0 +1,24 @@
+ASP.NET Core WebAPI — Deep Dive
+	• Health checks, metrics & tracing basics
+		What are Health checks?
+			Services/APIs/Tools that observe/check if the application is alive/accessible & dependencies awailable and working.
+		What are Metrics?
+			Performance data in numbers
+		What is Tracing?
+			Track request flow across services.
+
+Testing & Debugging
+	• Unit testing with xUnit — writing & running tests
+	• Advanced debugging in Visual Studio — breakpoints, Watch, Immediate
+	• Error handling, logging & testing best practices
+	
+	Testing Best Practices
+		Follow AAA pattern
+		Keep tests:
+			Small
+			Independent
+			Repeatable
+		Avoid:
+			Testing implementation details
+			External dependencies (use mocks)
+		Name tests clearly

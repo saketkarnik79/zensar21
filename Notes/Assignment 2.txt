@@ -1,0 +1,13 @@
+Enhance ASP_DemoWebAPIBasics project with following requirements:
+	Currently we have  only Create Order functionality across all layers.
+	Add the following functionality in SqlRepository for GetAll(), GetById(), Update(), Delete().
+	Add the following functionality in OrderService for GetAll(), GetById(), Update(), Delete().
+	Add the following functionality in OrdersApiController for GetAll(), GetById(), Update(), Delete().
+	
+	Add HealthCheck with endpoint to the project.
+	Add Metrics with endpoint to the project.
+	Add Tracing to the projects.
+	
+	Add Unit Tests with Mock for SqlRepository.
+	Add Unit Tests with Mock for OrderService.
+	Add Unit Tests with Mock for OrdersApiController.

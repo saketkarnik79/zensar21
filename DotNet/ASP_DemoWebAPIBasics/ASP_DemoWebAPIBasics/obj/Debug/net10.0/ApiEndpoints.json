@@ -1,0 +1,18 @@
+[
+  {
+    "ContainingType": "ASP_DemoWebAPIBasics.Controllers.OrdersApiController",
+    "Method": "PlaceOrder",
+    "RelativePath": "api/OrdersApi",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "order",
+        "Type": "ASP_DemoWebAPIBasics.Models.Order",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

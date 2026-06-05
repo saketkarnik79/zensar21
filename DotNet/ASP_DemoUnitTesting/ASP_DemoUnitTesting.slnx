@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="ASP_DemoUnitTesting.Tests/ASP_DemoUnitTesting.Tests.csproj" />
+  <Project Path="ASP_DemoUnitTesting/ASP_DemoUnitTesting.csproj" />
+</Solution>
