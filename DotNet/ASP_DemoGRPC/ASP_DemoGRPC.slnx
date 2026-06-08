@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="ASP_DemoGRPC/ASP_DemoGRPC.csproj" />
+  <Project Path="GrpcClient/GrpcClient.csproj" />
+</Solution>

@@ -1,0 +1,110 @@
+[
+  {
+    "ContainingType": "ASP_DemoWebAPIJWTAuth.Controllers.Auth.AuthApiController",
+    "Method": "Login",
+    "RelativePath": "api/AuthApi/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "ASP_DemoWebAPIJWTAuth.Models.LoginModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ASP_DemoWebAPIJWTAuth.Controllers.WeatherForecastController",
+    "Method": "Get",
+    "RelativePath": "WeatherForecast",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[ASP_DemoWebAPIJWTAuth.WeatherForecast, ASP_DemoWebAPIJWTAuth, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetWeatherForecast"
+  },
+  {
+    "ContainingType": "ASP_DemoWebAPIJWTAuth.Controllers.WeatherForecastController",
+    "Method": "Get2",
+    "RelativePath": "WeatherForecast/2",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[ASP_DemoWebAPIJWTAuth.WeatherForecast, ASP_DemoWebAPIJWTAuth, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetWeatherForecast2"
+  },
+  {
+    "ContainingType": "ASP_DemoWebAPIJWTAuth.Controllers.WeatherForecastController",
+    "Method": "AdminDelete",
+    "RelativePath": "WeatherForecast/admin-delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ASP_DemoWebAPIJWTAuth.Controllers.WeatherForecastController",
+    "Method": "GetAll",
+    "RelativePath": "WeatherForecast/all",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ASP_DemoWebAPIJWTAuth.Controllers.WeatherForecastController",
+    "Method": "Delete",
+    "RelativePath": "WeatherForecast/delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ASP_DemoWebAPIJWTAuth.Controllers.WeatherForecastController",
+    "Method": "Read",
+    "RelativePath": "WeatherForecast/read",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ASP_DemoWebAPIJWTAuth.Controllers.WeatherForecastController",
+    "Method": "Write",
+    "RelativePath": "WeatherForecast/write",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]

@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\ZensarDemos\\Zensar21\\DotNet\\ASP_DemoWebAPIJWTAuth\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5EDEC5AC-C657-484D-A86B-A371AF36E43D}|ASP_DemoWebAPIJWTAuth\\ASP_DemoWebAPIJWTAuth.csproj|c:\\zensardemos\\zensar21\\dotnet\\asp_demowebapijwtauth\\asp_demowebapijwtauth\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EDEC5AC-C657-484D-A86B-A371AF36E43D}|ASP_DemoWebAPIJWTAuth\\ASP_DemoWebAPIJWTAuth.csproj|solutionrelative:asp_demowebapijwtauth\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EDEC5AC-C657-484D-A86B-A371AF36E43D}|ASP_DemoWebAPIJWTAuth\\ASP_DemoWebAPIJWTAuth.csproj|c:\\zensardemos\\zensar21\\dotnet\\asp_demowebapijwtauth\\asp_demowebapijwtauth\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EDEC5AC-C657-484D-A86B-A371AF36E43D}|ASP_DemoWebAPIJWTAuth\\ASP_DemoWebAPIJWTAuth.csproj|solutionrelative:asp_demowebapijwtauth\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EDEC5AC-C657-484D-A86B-A371AF36E43D}|ASP_DemoWebAPIJWTAuth\\ASP_DemoWebAPIJWTAuth.csproj|c:\\zensardemos\\zensar21\\dotnet\\asp_demowebapijwtauth\\asp_demowebapijwtauth\\controllers\\auth\\authapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EDEC5AC-C657-484D-A86B-A371AF36E43D}|ASP_DemoWebAPIJWTAuth\\ASP_DemoWebAPIJWTAuth.csproj|solutionrelative:asp_demowebapijwtauth\\controllers\\auth\\authapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "C:\\ZensarDemos\\Zensar21\\DotNet\\ASP_DemoWebAPIJWTAuth\\ASP_DemoWebAPIJWTAuth\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "ASP_DemoWebAPIJWTAuth\\Controllers\\WeatherForecastController.cs",
+              "ToolTip": "C:\\ZensarDemos\\Zensar21\\DotNet\\ASP_DemoWebAPIJWTAuth\\ASP_DemoWebAPIJWTAuth\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "ASP_DemoWebAPIJWTAuth\\Controllers\\WeatherForecastController.cs",
+              "ViewState": "AgIAADoAAAAAAAAAAAAuwEgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-08T07:32:15.702Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AuthApiController.cs",
+              "DocumentMoniker": "C:\\ZensarDemos\\Zensar21\\DotNet\\ASP_DemoWebAPIJWTAuth\\ASP_DemoWebAPIJWTAuth\\Controllers\\Auth\\AuthApiController.cs",
+              "RelativeDocumentMoniker": "ASP_DemoWebAPIJWTAuth\\Controllers\\Auth\\AuthApiController.cs",
+              "ToolTip": "C:\\ZensarDemos\\Zensar21\\DotNet\\ASP_DemoWebAPIJWTAuth\\ASP_DemoWebAPIJWTAuth\\Controllers\\Auth\\AuthApiController.cs",
+              "RelativeToolTip": "ASP_DemoWebAPIJWTAuth\\Controllers\\Auth\\AuthApiController.cs",
+              "ViewState": "AgIAADwAAAAAAAAAAAAwwE8AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-08T07:22:01.739Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\ZensarDemos\\Zensar21\\DotNet\\ASP_DemoWebAPIJWTAuth\\ASP_DemoWebAPIJWTAuth\\Program.cs",
+              "RelativeDocumentMoniker": "ASP_DemoWebAPIJWTAuth\\Program.cs",
+              "ToolTip": "C:\\ZensarDemos\\Zensar21\\DotNet\\ASP_DemoWebAPIJWTAuth\\ASP_DemoWebAPIJWTAuth\\Program.cs",
+              "RelativeToolTip": "ASP_DemoWebAPIJWTAuth\\Program.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAkwDAAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-08T07:04:34.721Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

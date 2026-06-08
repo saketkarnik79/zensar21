@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "sRtrqHFkOk0=",
+  "success": true,
+  "projectFilePath": "C:\\ZensarDemos\\Zensar21\\DotNet\\ASP_DemoGRPC\\GrpcClient\\GrpcClient.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\saket\\.nuget\\packages\\google.protobuf\\3.35.0\\google.protobuf.3.35.0.nupkg.sha512",
+    "C:\\Users\\saket\\.nuget\\packages\\grpc.core.api\\2.80.0\\grpc.core.api.2.80.0.nupkg.sha512",
+    "C:\\Users\\saket\\.nuget\\packages\\grpc.net.client\\2.80.0\\grpc.net.client.2.80.0.nupkg.sha512",
+    "C:\\Users\\saket\\.nuget\\packages\\grpc.net.common\\2.80.0\\grpc.net.common.2.80.0.nupkg.sha512",
+    "C:\\Users\\saket\\.nuget\\packages\\grpc.tools\\2.81.0\\grpc.tools.2.81.0.nupkg.sha512",
+    "C:\\Users\\saket\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\saket\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.0\\microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

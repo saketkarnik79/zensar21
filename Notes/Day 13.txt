@@ -1,0 +1,220 @@
+Authentication & Authorization with JWT
+	What is Authentication (AuthN)?
+		Verify who the user is.
+		e.g. User logs in with email/password → system verifies → user is authenticated
+	What is Authorization (AuthZ)?
+		Determine what the user can do.
+			Happens after the authentication
+			Uses roles, permissions, policies.
+		e.g. Authenticated user → allowed to access /admin? → authorization decides
+	• Identity vs claims-based authentication
+		Identity-based authentication
+			Traditional Approach
+			User is identified by an unique identifier
+				UserId, UserName, Email, etc.
+			System often queries the DB for permissions every time.
+		Claims-based authentication
+			Modern Approach
+			Uses claims about the user
+			Claims are embedded in a token
+			e.g. 
+				{
+				  "sub": "123",
+				  "name": "Saket",
+				  "role": "Admin",
+				  "email": "user@example.com"
+				}
+		
+	• JWT tokens and flows
+		What is JWT (Json Web Token)?
+			A compact, URL-safe token used to transmit user data(claims) securely.
+		JWT Components
+			Header
+				e.g.
+					{
+					  "alg": "HS256",
+					  "typ": "JWT"
+					}
+			Payload (Claims) contains user data
+				e.g.
+					{
+					  "sub": "123",
+					  "name": "Saket Karnik",
+					  "role": "Admin",
+					  "exp": 1710000000
+					}
+			Signature
+				e.g.
+					HMACSHA256(
+					  base64UrlEncode(header) + "." + base64UrlEncode(payload),
+					  secret
+					)
+		Types of claims:
+			Registered: iss, sub, exp, aud
+			Public: standard fields like email
+			Private: custom fields like roles, permissions, etc.
+		JWT Authentication Flow
+			Client -> Auth Server -> Credentials -> Auth server verifies credentials -> Issues the Token -> Client Receives Token
+			API Calls:
+				Client sends the token in header of every request.
+				Authorization: Bearer <JWT>
+			Token Validates
+			Access Granted
+		
+		Refresh Token Flow
+			To avoid long-lived JWT risks:
+				Short-lived access token
+				Long-lived refresh token(stored on client securely)
+				e.g. Access token expired → client uses refresh token → new JWT issued
+	• Role-based & policy-based authorization
+		Role-based authorization (RBAC)
+			Based on Roles
+				[Authorize(Roles = "Admin")]
+		Policy-based authorization (PBAC)
+			Based or rules in policy
+				options.AddPolicy("CanEditOrders", policy => policy.RequireClaim("permission", "edit_orders"));
+			Usage:
+				[Authorize(Policy = "CanEditOrders")]
+	• Securing endpoints with JWT
+		API Protection Flow
+			Middleware pipeline
+				Extract JWT
+				Validate token
+				Attach user claims to request context
+				Apply authorization
+				
+	• Security, resilience & observability considerations
+		Security considerations
+			Token security
+				Use HTTPS only
+				Never store JWT in localStorage
+				Prefer HTTP-only cookies
+			Expiry & Lifetime
+				Short-lived access tokens
+				Use refresh tokens securely
+			Signature & Algorithm
+				Use stronger algorithms(RS256 preferred)
+				Avoid none algorithm attacks
+			Token Revocation
+				JWT is stateless -> hard to revoke
+				Solutions:
+					Maintain blacklist
+					Use short expiry time
+					Rotate signing keys
+			Least Privilege
+				Include only necessary claims
+				Avoid sesitive data in payload
+			Protection against attacks
+				Replay attacks -> Use nonce/timestamps
+				XSS -> Secure storage
+				CSRF -> Use SameSite cookies
+		Resilience considerations
+			Fault tolerance
+				Auth service failure -> fallback caching
+				Gracefult degradation
+			High Availability
+				Distributed identity providers
+				Load balancing for auth servers
+			Token validation caching
+				Cache public keys
+				Reduce latency in signature verification
+			Rate Limiting
+				Protect login & token endpoints
+				Prevent brute force attcks
+		Observability considerations
+			Logging
+				Log authentication attemps
+				Log authorization failures
+				Avoid logging full JWTs
+			Metrics
+				Track: 
+					Login success/failure rate
+					Token issuance rate
+					Authorization denial rate
+			Tracing
+				Trace request flow with correlation IDs
+				Include UserIDs not the ful token
+			Alerts
+				Excessive login failures
+				Suspicious token usage
+				Token replay patterns
+				
+gRPC in ASP.NET Core
+	What is gRPC?
+		gRPC is a high-performance RPC framework developed by Google that uses:
+			HTTP/2
+			Protocol Buffers (Protobuf)
+		which enables fast, strongly-typed communication between services.
+		
+	• Why gRPC — Protobuf basics
+		When to use gRPC?
+			Microservice communication
+			Low-latency systems
+			Backend-to-backend APIs
+			High-throughput services
+		What is protobuf?
+			A language-neutral, platform-neutral schema definition format.
+			
+			syntax = "proto3";
+
+			option csharp_namespace = "GrpcDemo";
+
+			service Greeter {
+			  rpc SayHello (HelloRequest) returns (HelloReply);
+			}
+
+			message HelloRequest {
+			  string name = 1;
+			}
+
+			message HelloReply {
+			  string message = 1;
+			}
+
+Microservices & Messaging
+	What is Microservices Architecture?
+		It is design approach where an application is built as a collection of small, independent, loosely coupled services, each responsible for a specific business capability.
+	Core Features
+		Independent Deploybility
+		Loose Coupling
+		High Cohesion
+		Decentralized Data
+		Technology Diversity
+		Resilience
+	• Microservices principles & communication patterns (sync vs async)
+		Communication patterns
+			Synchronous Pattern(Request/Response)
+				REST/gRPC
+			Asynchronous Pattern(Event-Driven/Brokered Architecture)
+				Using Message Brokers
+					MSMQ
+					RabbitMQ
+					Kafka
+					Azure Service Bus
+		Design principles (DDD Alignment)
+			Bounded Contexts
+			Single Responsibility
+		Key Architectural Components
+			API Gateway
+			Service Discovery
+			Configuration Management
+			Message Broker
+			Distributed Logging & Monitoring
+		Security in Microservices
+			AuthN
+				Centralized via Identity provider
+			AuthZ
+				RBAC/PBAC
+				Per-service enforcement
+			Network Security
+			Data Protection
+		Resilience & Fault Tolerance
+			Patterns
+				Retry
+				Circuit-Breaker
+				Timeout
+				Bulkhead
+	• Data management patterns
+		Database per service
+		Saga Patterns(Distributed Transactions)
+		Event Sourcing
