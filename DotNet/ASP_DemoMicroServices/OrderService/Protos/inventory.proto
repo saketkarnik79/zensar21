@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+option csharp_namespace = "InventoryService";
+
+package inventoryservice;
+
+// The Inventory service definition.
+service Inventory {
+  // Check the stock
+  rpc CheckStock (StockRequest) returns (StockReply);
+}
+
+// The request message containing the productId.
+message StockRequest {
+  int32 productId = 1;
+}
+
+// The response message containing the stock availability.
+message StockReply {
+  bool inStock = 1;
+}

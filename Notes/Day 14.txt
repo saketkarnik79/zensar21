@@ -1,0 +1,136 @@
+Angular 21 Overview
+	• Ecosystem & CLI
+	• Project structure & conventions
+	• Introduction to Angular
+		What is Angular?
+			Angular is a development platform & framework for building the single-page applications (SPAs) using HTML, CSS & TypeScript. Angular itself is built using TypeScript.
+		Features of Angular
+			Modular by design
+			Component-based Structure
+			Templates
+			Two-Way data binding
+			Dependency Injection
+			Routing
+			Angular Forms
+				Template-Driven Forms
+				Reactive Forms
+			HTTP Module
+			Testing
+			Active Community
+	Angular Architecture
+		The Architecture of an Angular Application is based on the idea of components. An angular Application starts with a Top-level component called the Root Component. We then add child components forming a tree of loosely coupled components.
+	Building blocks of Angular Application
+		Component
+		Templates
+		Metadata
+		Data Binding
+		Directives
+		Services
+		Dependency Injection
+	What is Angular CLI?
+		It is a command-line tool that allows us to create, develop, scaffold,& manage Angular applications from a command shell.
+TypeScript Recap for Angular
+	• Classes, interfaces, generics
+		Classes in TypeScript
+			class Person {
+			  name: string;
+
+			  constructor(name: string) {
+				this.name = name;
+			  }
+
+			  greet() {
+				return `Hello ${this.name}`;
+			  }
+			}
+			
+			class User {
+			  constructor(
+				public id: number,
+				private password: string,
+				protected role: string
+			  ) {}
+
+			  getRole() {
+				return this.role;
+			  }
+			}
+			
+			constructor(private http: HttpClient) {}
+			
+		Interfaces in TypeScript
+			Used to define shape of data (very common feature in Angular for APIs, models).
+			
+			interface User {
+			  id: number;
+			  name: string;
+			  email?: string; // optional
+			}
+			
+			function getUser(user: User) {
+			  console.log(user.name);
+			}
+			
+			interface Admin extends User {
+			  role: string;
+			}
+		Generics in TypeScript
+			Generics make code reusable & type-safe.
+			function identity<T>(value: T): T {
+			  return value;
+			}
+			identity<string>("Hello");
+			identity<number>(10);
+
+			interface ApiResponse<T> {
+			  data: T;
+			  status: number;
+			}
+			
+			const response: ApiResponse<User> = {
+			  data: { id: 1, name: "John" },
+			  status: 200
+			};
+			
+			this.http.get<User[]>('/api/users')
+		Decorators
+			These are metadata annotations applied to classes, methods, or properties.
+			
+			@Component({
+			  selector: 'app-user',
+			  templateUrl: './user.component.html'
+			})
+			export class UserComponent {}
+		
+			@Component({
+			  selector: 'app-user'
+			})
+			export class UserComponent {
+			  users: User[] = [];
+
+			  constructor(private userService: UserService) {}
+
+			  ngOnInit() {
+				this.userService.getUsers().subscribe(data => {
+				  this.users = data;
+				});
+			  }
+			}
+Angular concepts
+	What is Bootstrapping?
+		Bootstrapping is the process of initialiing or loading our Angular application.
+		Angular Bootstrapping Steps:
+			Browser loads the index.html
+			Loads angular & third-party libraries & application
+			Executes application entry point (main.ts)
+			Executes the root component (app.ts)
+			Displays the template(app.html)
+	What is bootstrapApplication()?
+		It is an API that is responsible for starting an Angular application in a web browser. Following tasks are performed by it:
+			Creates the browser platform
+			Initializes the Angular dependency injection system
+			Sets up the redering engine
+			Starts the change detection
+			Instantiates the root component
+			Attaches it to the DOM
+			

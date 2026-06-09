@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\ZensarDemos\\Zensar21\\DotNet\\Microservices\\DemoMicroServices\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6BB5A0E4-A3ED-EBD8-B86F-21996AABC09A}|ProductService\\ProductService.csproj|c:\\zensardemos\\zensar21\\dotnet\\microservices\\demomicroservices\\productservice\\controllers\\productsapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BB5A0E4-A3ED-EBD8-B86F-21996AABC09A}|ProductService\\ProductService.csproj|solutionrelative:productservice\\controllers\\productsapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81DDED9D-158B-E303-5F62-77A2896D2A5A}|docker-compose.dcproj|c:\\zensardemos\\zensar21\\dotnet\\microservices\\demomicroservices\\docker-compose.yml||{06C066C6-04A2-4E5D-8202-439FD4234EF1}",
+      "RelativeMoniker": "D:0:0:{81DDED9D-158B-E303-5F62-77A2896D2A5A}|docker-compose.dcproj|solutionrelative:docker-compose.yml||{06C066C6-04A2-4E5D-8202-439FD4234EF1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ABE66B30-BD47-A7B2-B17B-5BA67959B026}|ApiGateway\\ApiGateway.csproj|c:\\zensardemos\\zensar21\\dotnet\\microservices\\demomicroservices\\apigateway\\ocelotapigwconfig.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{ABE66B30-BD47-A7B2-B17B-5BA67959B026}|ApiGateway\\ApiGateway.csproj|solutionrelative:apigateway\\ocelotapigwconfig.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BCC5D4C-DCFD-F350-0302-6CEEC93FCB6D}|OrderService\\OrderService.csproj|c:\\zensardemos\\zensar21\\dotnet\\microservices\\demomicroservices\\orderservice\\controllers\\ordersapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BCC5D4C-DCFD-F350-0302-6CEEC93FCB6D}|OrderService\\OrderService.csproj|solutionrelative:orderservice\\controllers\\ordersapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "docker-compose.yml",
+              "DocumentMoniker": "C:\\ZensarDemos\\Zensar21\\DotNet\\Microservices\\DemoMicroServices\\docker-compose.yml",
+              "RelativeDocumentMoniker": "docker-compose.yml",
+              "ToolTip": "C:\\ZensarDemos\\Zensar21\\DotNet\\Microservices\\DemoMicroServices\\docker-compose.yml",
+              "RelativeToolTip": "docker-compose.yml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
+              "WhenOpened": "2026-06-09T07:03:02.364Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "OcelotAPIGWConfig.json",
+              "DocumentMoniker": "C:\\ZensarDemos\\Zensar21\\DotNet\\Microservices\\DemoMicroServices\\ApiGateway\\OcelotAPIGWConfig.json",
+              "RelativeDocumentMoniker": "ApiGateway\\OcelotAPIGWConfig.json",
+              "ToolTip": "C:\\ZensarDemos\\Zensar21\\DotNet\\Microservices\\DemoMicroServices\\ApiGateway\\OcelotAPIGWConfig.json",
+              "RelativeToolTip": "ApiGateway\\OcelotAPIGWConfig.json",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAAA4AAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-06-09T07:01:59.39Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "OrdersApiController.cs",
+              "DocumentMoniker": "C:\\ZensarDemos\\Zensar21\\DotNet\\Microservices\\DemoMicroServices\\OrderService\\Controllers\\OrdersApiController.cs",
+              "RelativeDocumentMoniker": "OrderService\\Controllers\\OrdersApiController.cs",
+              "ToolTip": "C:\\ZensarDemos\\Zensar21\\DotNet\\Microservices\\DemoMicroServices\\OrderService\\Controllers\\OrdersApiController.cs",
+              "RelativeToolTip": "OrderService\\Controllers\\OrdersApiController.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAwwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-09T07:01:04.651Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProductsApiController.cs",
+              "DocumentMoniker": "C:\\ZensarDemos\\Zensar21\\DotNet\\Microservices\\DemoMicroServices\\ProductService\\Controllers\\ProductsApiController.cs",
+              "RelativeDocumentMoniker": "ProductService\\Controllers\\ProductsApiController.cs",
+              "ToolTip": "C:\\ZensarDemos\\Zensar21\\DotNet\\Microservices\\DemoMicroServices\\ProductService\\Controllers\\ProductsApiController.cs",
+              "RelativeToolTip": "ProductService\\Controllers\\ProductsApiController.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAQwBkAAABLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-09T07:00:24.413Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
