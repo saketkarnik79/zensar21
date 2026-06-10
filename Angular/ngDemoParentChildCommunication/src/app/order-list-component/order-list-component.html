@@ -1,0 +1,12 @@
+<h3>Orders for {{customer.name}}</h3>
+<ul *ngIf="customerOrders.length > 0; else noOrders">
+    <li *ngFor="let order of customerOrders">
+        <button (click)="selectOrder(order)">
+            {{order.productName}} - ₹{{order.amount}}
+        </button>
+    </li>
+</ul>
+
+<ng-template #noOrders>
+    <p>No Orders placed by {{customer.name}}.</p>
+</ng-template>

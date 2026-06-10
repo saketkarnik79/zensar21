@@ -1,0 +1,23 @@
+<h2>Customers</h2>
+
+<ul>
+    <li *ngFor="let customer of customers">
+        <button (click)="selectCustomer(customer)">{{customer.name}}</button>
+    </li>
+</ul>
+<hr/>
+
+<!-- Parent -> Child Communication -->
+ <order-list 
+    *ngIf="selectedCustomer" 
+    [customer] = "selectedCustomer" 
+    (orderSelected) = "onOrderSelected($event)">
+ </order-list>
+ <hr/>
+ <!-- Child -> Parent Result -->
+  <div *ngIf="selectedOrder">
+    <h3>Selected Order Details</h3>
+    <p><strong>Order ID:</strong>{{selectedOrder.id}}</p>
+    <p><strong>Product:</strong>{{selectedOrder.productName}}</p>
+    <p><strong>Amount:</strong>{{selectedOrder.amount}}</p>
+  </div>

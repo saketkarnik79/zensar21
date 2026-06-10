@@ -1,0 +1,81 @@
+Components
+	• Introduction to Angular Components
+		It is the main building block of an Angular application.
+		These components contains the data & user interaction logic that define how the View looks & behaves.
+		The components consiste of three main building blocks.
+			Class
+			Metadata
+			Template
+		How do I create the new Angular component?
+			Create the Component file.
+			Import the required external classes/functions.
+			Create the component class & export it.
+			Add @Component decorator.
+			Add metadata to @Component decorator.
+			Create the template.
+			Create the CSS styles.
+			Register the Component in target host/parent component.
+	• Data Binding
+		What is Data Binding?
+			Data binding is a software programming technique that connects a user interface (UI) element to a data source (like a variable, object, or database). It automatically synchronizes the two, meaning any updates made to the data are immediately reflected in the UI, and vice versa, without requiring manual code to update the screen
+		Why is it used?
+			Before data binding, developers had to write repetitive code to manually fetch data from a source and push it into a UI component (e.g., pulling a user's name from a database and writing code to display it inside a text box). Data binding abstracts this process, which significantly reduces the amount of code needed, minimizes bugs, and makes the application much easier to maintain.
+		What is Angular Data Binding?
+			Data binding is a technique, where the data stays in sync between the component & the template.
+		Types of Data Binding in angular
+			One-Way Data Binding
+			Two-way Data Binding
+	• Interpolation in Angular
+	• Property Binding
+	• Event Binding
+	• Two-way Binding & ngModel
+	• Adding Child Component
+	• ngModelChange & Change Event
+Directives
+	• Angular Directives
+		What are Angular directives?
+			The angular Directive delps us to manipulate DOM. You can change the appearance, behavior, or layout of a DOM element using them.
+		Types Of Directives in Angular
+			Component Directives
+				Components are special Directives in Angular with a Template(view).
+			Structural Directives
+				Structural Directives can change the DOM layout by adding and removing DOM elements.
+					*ngFor
+					*ngSwitch
+					*ngIf
+			Attribute Directives
+				ngModel
+				ngClass
+				ngStyle
+	• ngFor 
+	• ngSwitch
+	• ngIf
+	• ngClass
+	• ngStyle
+	• Custom Directive
+Pipes
+	• Angular Pipes
+		What are Angular pipes?
+			Angular pipes takes data as input & formats or transform the data to display in the template.
+			Important pipes:
+				DatePipe
+				UpperCasePipe & LowerCasePipe
+				SlicePipe
+				DecimalPipe
+				NumberPipe
+				PercentPipe
+				CurrencyPipe
+	• Angular Custom Pipes
+	
+Component Communication
+	• Angular Component Communication
+		There are few ways in which components can communicate or share the data between each other.
+		Possible Scenarios:
+			Parent to Child Communication
+			Child to parent Communication
+			Interaction when there is no parent-child relation
+	• Passing data from Parent to child component 
+	• Passing Data from Child to Parent Component
+
+
+			

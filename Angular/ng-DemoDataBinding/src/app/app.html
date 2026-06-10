@@ -1,0 +1,23 @@
+Welcome, {{firstName}} {{lastName}}!
+<hr/>
+<h2>Property Binding Demo</h2>
+<button [disabled]="isDisabled" >I am disabled</button>
+<hr/>
+<h2>Event Binding Demo</h2>
+<button (click)="onSave()">Save</button>
+<input type="text" (change)="OnChange()" placeholder="Some Data" />
+<hr/>
+<h2>Two-way Binding Demo</h2>
+<input type="text" placeholder="Some Data" [(value)] = "data" (change)="OnChange2($event)" />
+<button (click)="ChangedData()">Change Data</button>
+<hr/>
+<h2>Two-way Binding using ngModel Demo</h2>
+<input type="text" placeholder="Some Data" name="Data" [(ngModel)]="data" />
+<button (click)="ChangedData()">Change Data</button>
+<hr/>
+<h2>Two-way Binding using ngModelChange Demo</h2>
+<input type="text" placeholder="Some Data" name="Data" [(ngModel)]="data" (ngModelChange)="OnChange2($event)" />
+<button (click)="ChangedData()">Change Data</button>
+<hr/>
+
+<router-outlet></router-outlet>

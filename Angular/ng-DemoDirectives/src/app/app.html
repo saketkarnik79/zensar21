@@ -1,0 +1,139 @@
+<!-- <h1> {{ title() }}</h1>
+<hr />
+<ul>
+  <li *ngFor="let movie of movies">
+    <p>{{movie.title}} - {{movie.director}} - {{movie.releaseDate}}</p>
+    Cast: <em>{{movie.cast}}</em>
+  </li>
+  
+</ul> -->
+
+<!-- <div class='panel panel-primary'>
+    <div class='panel-heading'>
+        {{title()}}
+    </div>
+
+    <div class='panel-body'>
+        <div class='table-responsive'>
+            <table class='table table-striped'>
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Director</th>
+                        <th>Cast</th>
+                        <th>Release Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let movie of movies;">
+                        <td>{{movie.title}}</td>
+                        <td>{{movie.director}}</td>
+                        <td>{{movie.cast}}</td>
+                        <td>{{movie.releaseDate}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div> -->
+
+<!-- <div class='card'>
+  <div class='card-header'>
+    Multiple ngSwitchCase with same condition
+  </div>
+
+  <div class="card-body">
+    <select [(ngModel)]="selectedValue1" title="Items">
+      <option *ngFor="let item of items;" [value]="item.name">{{item.name}}</option>
+    </select>
+
+    <div [ngSwitch]="selectedValue1">
+      <p *ngSwitchCase="'One'">One is Selected</p>
+      <p *ngSwitchCase="'Two'">Two is Selected</p>
+      <p *ngSwitchCase="'Two'">Two Again used in another element</p>
+      <p *ngSwitchDefault>This is Default</p>
+    </div>
+  </div>
+
+</div> -->
+
+<!-- <h1>Simple example of ngIf </h1>
+
+
+<div class="row">
+  Show <input type="checkbox" [(ngModel)]="showMe" placeholder="x"/>
+</div>
+
+<h1>ngIf </h1>
+
+<p *ngIf="showMe">
+  ShowMe is checked
+</p>
+<p *ngIf="!showMe">
+  ShowMe is unchecked
+</p>
+
+<h1>ngIf Else</h1>
+
+<p *ngIf="showMe; else elseBlock1">
+  ShowMe is checked
+</p>
+
+<ng-template #elseBlock1>
+  <p>ShowMe is unchecked Using elseBlock</p>
+</ng-template>
+
+<h1>ngIf then else</h1>
+
+<p *ngIf="showMe; then thenBlock2 else elseBlock2">
+  This is not rendered
+</p>
+
+<ng-template #thenBlock2>
+  <p>ShowMe is checked Using thenblock</p>
+</ng-template>
+
+<ng-template #elseBlock2>
+  <p>ShowMe is unchecked Using elseBlock</p>
+</ng-template>
+
+<h1>using hidden </h1>
+
+<p [hidden]="showMe">
+    content to render, when the condition is true  using hidden property binding
+</p>
+
+<p [hidden]="!showMe">
+    content to render, when the condition is false. using hidden property binding
+</p> -->
+
+<!-- <div [ngClass]="'primary big'">
+  Sample Text
+</div>
+<div ngClass="primary big">
+  Sample Text
+</div>
+
+<div [ngClass]="['secondary', 'small']">
+  Sample Text
+</div> -->
+
+<!-- <b>Value coming from the component method</b><br/>
+<b>String</b>
+<div [ngClass]="cssVar">
+  Sample Text
+</div>
+<b>Array</b>
+<div [ngClass]="cssArray">
+  Sample Text
+</div>
+<b>Object</b>
+<div [ngClass]="cssClass">
+  Sample Text
+</div> -->
+
+<h1>
+  Custom Directive Demo
+</h1>
+<button [ttClass]="'blue'">Click Me!</button>
+<router-outlet></router-outlet>
