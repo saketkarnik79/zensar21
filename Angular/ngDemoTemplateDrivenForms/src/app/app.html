@@ -1,0 +1,51 @@
+<h1>{{title()}}</h1>
+<hr/>
+<form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+  <div class="form-group">
+    <label for="firstname" class="form-label">First Name</label>
+    <input type="text" id="firstname" name="firstname" placeholder="First Name" 
+      class="form-control" ngModel />
+  </div>
+  <div class="form-group">
+    <label for="lastname" class="form-label">Last Name</label>
+    <input type="text" id="lastname" name="lastname" placeholder="Last Name"
+      class="form-control" ngModel />
+  </div>
+  <div class="form-group">
+    <label for="email" class="form-label">Email</label>
+    <input type="email" id="email" name="email" placeholder="Email"
+      class="form-control" ngModel />
+  </div>
+  <div>
+    <label for="gender" class="form-label">Gender</label>
+    <div class="form-check form-check-inline">
+      <input type="radio" id="genderMale" name="gender" placeholder="Gender"
+        class="form-check-input" value="Male" ngModel />
+      <label for="genderMale" class="form-check-label">Male</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input type="radio" id="genderFemale" name="gender" placeholder="Gender"
+        class="form-check-input" value="Female" ngModel />
+      <label for="genderFemale" class="form-check-label">Female</label>
+    </div>
+  </div>
+  <div class="form-check form-check-inline">
+    <label for="ismarried" class="form-check-label">Married?</label>
+    <input type="checkbox" id="ismarried" name="ismarried" placeholder="Married?" 
+      class="form-check-input" ngModel/>
+  </div>
+  <div class="form-group">
+    <label for="country" class="form-label">Country</label>
+    <select id="country" name="country" class="form-select" ngModel>
+      <option selected="" value=""></option>
+      <option [ngValue]="c.id" *ngFor="let c of countryList">
+        {{c.name}}
+      </option>
+    </select>
+  </div>
+  <div>
+    <button type="submit">Submit</button>
+  </div>
+</form>
+
+<router-outlet></router-outlet>

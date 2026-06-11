@@ -1,0 +1,25 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Saket Karnik",
+      "email": "saket@example.com"
+    },
+    {
+      "id": "2",
+      "name": "Amit Sharma",
+      "email": "amit.sharma@example.com"
+    },
+    {
+      "id": "3",
+      "name": "Priya Deshmukh",
+      "email": "priya.d@example.com"
+    },
+    {
+      "name": "James Bond",
+      "email": "james@example.com",
+      "id": "dX3ZtCJbKGk"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

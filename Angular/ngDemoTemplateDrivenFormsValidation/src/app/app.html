@@ -1,0 +1,90 @@
+<div>
+  <h2>User Registration Demo</h2>
+  <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)" novalidate>
+    <div>
+      <label>Name</label>
+      <input type="text" name="name" id="name" [(ngModel)]="user.name" required minlength="3" #name="ngModel" placeholder="Name" />
+      <div style="color:red; font-weight:bold" *ngIf="name.invalid && name.touched">
+        <span *ngIf="name.errors?.['required']">
+          Name is required.
+        </span>
+        <span *ngIf="name.errors?.['minlength']">
+          Name must have minimum 3 characters.
+        </span>
+      </div>
+    </div>
+
+    <div>
+      <label>Email</label>
+      <input type="email" name="email" id="email" [(ngModel)]="user.email" required email #email="ngModel" placeholder="Email" />
+      <div style="color:red; font-weight:bold" *ngIf="email.invalid && email.touched">
+        <span *ngIf="email.errors?.['required']">
+          Email is required.
+        </span>
+        <span *ngIf="name.errors?.['email']">
+          Invalid email format.
+        </span>
+      </div>
+    </div>
+
+    <div>
+      <label>Password</label>
+      <input type="password" name="password" id="password" [(ngModel)]="user.password" required minlength="6" #password="ngModel" placeholder="Password" />
+      <div style="color:red; font-weight:bold" *ngIf="password.invalid && password.touched">
+        <span *ngIf="password.errors?.['required']">
+          Password is required.
+        </span>
+        <span *ngIf="password.errors?.['minlength']">
+          Password must have minimum 6 characters.
+        </span>
+      </div>
+    </div>
+
+    <div>
+      <label>Age</label>
+      <input type="number" name="age" id="age" [(ngModel)]="user.age" required min="18" #age="ngModel" placeholder="Age" />
+      <div style="color:red; font-weight:bold" *ngIf="age.invalid && age.touched">
+        <span *ngIf="age.errors?.['required']">
+          Age is required.
+        </span>
+        <span *ngIf="age.errors?.['min']">
+          Minimum permitted age is 18.
+        </span>
+      </div>
+    </div>
+
+    <div>
+      <label>Country</label>
+      <select name="country" id="country" [(ngModel)]="user.country" required #country="ngModel" title="Country">
+        <option value="">---Select---</option>
+        <option *ngFor="let c of countries" [value]="c">
+          {{c}}
+        </option>
+      </select>
+      <div style="color:red; font-weight:bold" *ngIf="country.invalid && country.touched">
+        <span>Country is required.</span>
+      </div>
+    </div>
+
+    <div>
+      <label>
+        <input type="checkbox" name="terms" id="terms" [(ngModel)]="user.terms" required #terms="ngModel" placeholder="*" />
+        Accept terms & conditions?
+      </label>
+      <div style="color:red; font-weight:bold" *ngIf="terms.invalid && terms.touched">
+        <span>
+          You must accept the terms.
+        </span>
+      </div>
+    </div>
+
+    <div>
+      <button type="submit" [disabled]="userForm.invalid">Submit</button>
+      <button type="button" (click)="resetForm(userForm)">Reset</button>
+    </div>
+  </form>
+
+  <pre>{{ user | json}}</pre>
+</div>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,61 @@
+Component Life Cycle Hook
+	• Component Life Cycle
+		What are Angular Component Lifecycle hooks?
+			Angular lets us know when the lifecycle events happen using the lifecycle hooks. In practice, these lifecycle hooks are callback function, which angular invokes when a specific event occurs during the component's lifecycle.
+		Types of hooks
+			ngOnChanges
+			ngOnInit
+			ngDoCheck
+			ngAfterContentInit
+			ngAfterContentChecked
+			ngAfterViewInit
+			ngAfterViewChecked
+			ngOnDestroy
+Angular Forms
+	The Angular forms handle user interactions and can be used to collect data from the user.
+	• Fundamental & Concepts
+		Angular Forms Module
+			This module provides different form services out of the box.
+		Approaches
+			• Template-Driven Forms
+			• Reactive Forms	
+Services & Dependency Injection
+	• Services
+		What is An Angular Service?
+			Service is a piece of reusable code with a focused purpose.
+		What Angular Service are used for?
+			Features that are independent of components, such as logging services.
+			Share logic or data across components.
+			Encapsulate external interactions like data access.
+			
+	• Dependency injection
+	
+Angular Forms Validation
+	• Validation in Template-Driven Forms
+	• Validation in Reactive Forms
+HTTP
+	HTTP communication in Angular is provided by HttpClient service available under @angular/common/http package.
+	• HTTP GET Example
+	• HTTP POST/PUT Example
+Angular Router
+	What are routes?
+		Routes are virtual paths to some desired resource.
+		
+	• Angular Router
+		What is Routing?
+			Routing allows you to move from one part of the application to another part or one view to another view.
+			Handled by Angular Router Module.
+		Components of Angular Router
+			Router
+			Route
+			Routes
+			RouterOutlet
+			RouterLink
+			RouterLinkActive
+			ActivatedRoute
+			RouterState
+			RouteLink Parameters
+	• Angular Router with standalone components
+	• Location Strategies in Angular Router
+	• Passing Parameters to Route
+	• Navigation between Routes

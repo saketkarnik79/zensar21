@@ -1,0 +1,77 @@
+<form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="firstname" class="form-label">First Name</label>
+    <input type="text" id="firstname" name="firstname" placeholder="First Name" 
+      class="form-control" formControlName="firstname" />
+    <div *ngIf="!contactForm.controls['firstname']?.valid && 
+      (contactForm.controls['firstname']?.dirty || contactForm.controls['firstname']?.touched)"
+      class="text-danger">
+      <!-- First Name is not valid. -->
+       <div [hidden]="!contactForm.controls['firstname'].errors?.['required']">
+          First Name is required.
+        </div>
+      <div [hidden]="!contactForm.controls['firstname'].errors?.['minlength']">
+        Min Length is 2.
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="lastname" class="form-label">Last Name</label>
+    <input type="text" id="lastname" name="lastname" placeholder="Last Name" 
+      class="form-control" formControlName="lastname"/>
+    <div *ngIf="!contactForm.controls['lastname']?.valid && 
+      (contactForm.controls['lastname']?.dirty || contactForm.controls['lastname']?.touched)"
+      class="text-danger">
+      <!-- First Name is not valid. -->
+       <div [hidden]="!contactForm.controls['lastname'].errors?.['required']">
+          Last Name is required.
+        </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="email" class="form-label">Email</label>
+    <input type="email" id="email" name="email" placeholder="Email" 
+      class="form-control" formControlName="email" />
+  </div>
+  <div>
+    <label for="gender" class="form-label">Gender</label>
+    <div class="form-check form-check-inline">
+      <input type="radio" id="genderMale" name="gender" placeholder="Gender"
+        class="form-check-input" value="Male" formControlName="gender" />
+      <label for="genderMale" class="form-check-label">Male</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input type="radio" id="genderFemale" name="gender" placeholder="Gender"
+        class="form-check-input" value="Female" formControlName="gender"/>
+      <label for="genderFemale" class="form-check-label">Female</label>
+    </div>
+    <div *ngIf="!contactForm.controls['gender']?.valid && 
+      (contactForm.controls['gender']?.dirty || contactForm.controls['gender']?.touched)"
+      class="text-danger">
+      <!-- First Name is not valid. -->
+       <div [hidden]="!contactForm.controls['gender'].errors?.['required']">
+          Gender is required.
+        </div>
+    </div>
+  </div>
+  <div class="form-check form-check-inline">
+    <input type="checkbox" id="ismarried" name="ismarried" placeholder="Is Married?"
+     class="form-check-input" formControlName="ismarried"/>
+    <label for="ismarried" class="form-check-label">Is Married?</label>
+  </div>
+  <div class="form-group">
+    <label for="country" class="form-label">Country</label>
+    <select id="country" name="country" class="form-select" formControlName="country">
+      <option selected="" value=""></option>
+      @for (c of countryList; track c.id) {
+        <option [ngValue]="c.id">{{c.name}}</option>
+      }
+    </select>
+  </div>
+  <div>
+    <button type="submit" [disabled]="!contactForm.valid">Submit</button>
+  </div>
+
+</form>
+
+<router-outlet></router-outlet>
